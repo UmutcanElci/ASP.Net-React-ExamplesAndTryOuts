@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "AoQXIWICNcrn4n38E4XRDtI+eBjg8yZnpoAFsSXstWE=",
+  "Source": "backendPetStore",
+  "BasePath": "_content/backendPetStore",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

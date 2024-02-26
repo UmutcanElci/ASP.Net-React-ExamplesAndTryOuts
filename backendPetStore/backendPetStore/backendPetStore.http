@@ -1,0 +1,6 @@
+@backendPetStore_HostAddress = http://localhost:5271
+
+GET {{backendPetStore_HostAddress}}
+Accept: application/json
+
+###
