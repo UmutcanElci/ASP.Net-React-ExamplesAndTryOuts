@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/IntoNet" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/React" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/React/airbnb" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/React/my-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ReactAsp/react-asp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SignalR" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SignalR/formulaone.chatapp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/VideoPlayerR/ReactCustomController/react-custom-player" vcs="Git" />
+  </component>
+</project>
