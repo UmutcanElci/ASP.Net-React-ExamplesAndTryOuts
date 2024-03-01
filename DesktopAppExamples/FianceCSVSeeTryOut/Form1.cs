@@ -17,19 +17,16 @@ namespace FianceCSVSeeTryOut
 
     public partial class Form1 : Form
     {
-        private List<string[]> csvData;
+        //private List<string[]> csvData;
 
         public Form1()
         {
             InitializeComponent();
         }
         
-        private void button1(object sender, EventArgs e)
-        {
-            
-        }
+       
 
-        private List<string[]> ReadCsvData(string filePath)
+        /*private List<string[]> ReadCsvData(string filePath)
         {
             List<string[]> data = new List<string[]>();
             using (var reader = new StreamReader(filePath))
@@ -67,6 +64,30 @@ namespace FianceCSVSeeTryOut
                     richTextBox1.AppendText(formattedRow);
                 }
             }
+        }*/
+        private void file_button_Click(object sender, EventArgs e)
+        {
+            string file = "C:\\Users\\Malat\\Downloads\\HistoricalData_1709298232018.csv";
+            string outputFile = "C:\\Users\\Malat\\Downloads\\Filtered.csv";
+            List<StockModel> outputModel = new List<StockModel>();
+            var reader = new StreamReader(file);
+            var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
+
+            var records = csv.GetRecords<StockModel>();
+            foreach (var record in records)
+            {
+                Console.WriteLine(record.High + "   " + record.Low);
+            }
+        }
+
+        private void nasdaqSite_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.nasdaq.com/market-activity/quotes/historical");
+        }
+
+        private void dataGrid1_Navigate(object sender, NavigateEventArgs ne)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
