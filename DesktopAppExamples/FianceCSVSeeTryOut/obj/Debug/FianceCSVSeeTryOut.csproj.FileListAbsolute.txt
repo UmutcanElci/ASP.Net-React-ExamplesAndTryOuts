@@ -25,3 +25,4 @@ C:\Users\Malat\Desktop\Code\net\DesktopAppExamples\FianceCSVSeeTryOut\bin\Debug\
 C:\Users\Malat\Desktop\Code\net\DesktopAppExamples\FianceCSVSeeTryOut\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Malat\Desktop\Code\net\DesktopAppExamples\FianceCSVSeeTryOut\obj\Debug\FianceCSVSeeTryOut.Form1.resources
 C:\Users\Malat\Desktop\Code\net\DesktopAppExamples\FianceCSVSeeTryOut\obj\Debug\FianceCSVSeeTryOut.csproj.CopyComplete
+C:\Users\Malat\Desktop\Code\net\DesktopAppExamples\FianceCSVSeeTryOut\bin\Debug\YahooFinanceClient.dll

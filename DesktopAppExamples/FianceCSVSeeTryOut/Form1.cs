@@ -2,15 +2,20 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CsvHelper;
 using CsvHelper.Configuration;
+using YahooFinance;
+using YahooFinanceClient.Models;
+
 
 namespace FianceCSVSeeTryOut
 {
@@ -23,8 +28,8 @@ namespace FianceCSVSeeTryOut
         {
             InitializeComponent();
         }
-        
-       
+
+
 
         /*private List<string[]> ReadCsvData(string filePath)
         {
@@ -67,16 +72,28 @@ namespace FianceCSVSeeTryOut
         }*/
         private void file_button_Click(object sender, EventArgs e)
         {
-            string file = "C:\\Users\\Malat\\Downloads\\HistoricalData_1709298232018.csv";
-            string outputFile = "C:\\Users\\Malat\\Downloads\\Filtered.csv";
-            List<StockModel> outputModel = new List<StockModel>();
-            var reader = new StreamReader(file);
-            var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
+            
+            string filePath = "C:\\Users\\Malat\\Downloads\\HistoricalData_1709298232018.csv";
 
-            var records = csv.GetRecords<StockModel>();
-            foreach (var record in records)
+            try
             {
-                Console.WriteLine(record.High + "   " + record.Low);
+               
+                List<StockModel> stockData = new List<StockModel>();
+
+                
+                using (var reader = new StreamReader(filePath))
+                {
+                    var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
+                    stockData = csv.GetRecords<StockModel>().ToList();
+                }
+
+                
+                dataGridView1.DataSource = stockData;
+            }
+            catch (Exception ex)
+            {
+                
+                MessageBox.Show($"Error reading CSV file: {ex.Message}");
             }
         }
 
@@ -85,9 +102,34 @@ namespace FianceCSVSeeTryOut
             System.Diagnostics.Process.Start("https://www.nasdaq.com/market-activity/quotes/historical");
         }
 
-        private void dataGrid1_Navigate(object sender, NavigateEventArgs ne)
+       
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            throw new System.NotImplementedException();
+
         }
+        /*public async Task<int> getStockData(string symbol,DateTime startDate, DateTime endTime)
+        {
+            try
+            {
+               Stock.
+            }
+            catch
+            {
+
+            }
+        }*/
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo startInfo = new ProcessStartInfo
+            {
+                FileName = "python",
+                Arguments = "main.py",
+                WorkingDirectory = @"C:\Users\Malat\Desktop\Code\net\DesktopAppExamples\FianceCSVSeeTryOut" // Adjust as needed
+            };
+            System.Diagnostics.Process.Start(startInfo);
+        }
+
+      
     }
 }
