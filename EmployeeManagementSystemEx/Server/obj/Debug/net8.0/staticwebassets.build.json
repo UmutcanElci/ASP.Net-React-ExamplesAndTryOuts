@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DNiEIenx1d6P+N64awmBQuprgsqWkdWuII6opxsD9Oc=",
+  "Hash": "G6xMHbKMwzFdhiE9s6d89bRCSYp0NIhfC+to7OAduiA=",
   "Source": "Server",
   "BasePath": "_content/Server",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "Client",
       "GetPublishAssetsTargets": "ComputeFilesToPublish;GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "_PublishingBlazorWasmProject=true;BuildProjectReferences=false;ResolveAssemblyReferencesFindRelatedSatellites=true;Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishProperties": "_PublishingBlazorWasmProject=true;BuildProjectReferences=false;ResolveAssemblyReferencesFindRelatedSatellites=true",
       "AdditionalPublishPropertiesToRemove": "NoBuild;RuntimeIdentifier;WebPublishProfileFile;TargetFramework",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildProperties": "",
       "AdditionalBuildPropertiesToRemove": "RuntimeIdentifier;SelfContained;WebPublishProfileFile;TargetFramework"
     }
   ],
@@ -28,6 +28,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Malat\\Desktop\\Code\\net\\EmployeeManagementSystemEx\\Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\AutoMapper.wasm",
+      "SourceId": "Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Malat\\Desktop\\Code\\net\\EmployeeManagementSystemEx\\Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/AutoMapper.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Malat\\Desktop\\Code\\net\\EmployeeManagementSystemEx\\Client\\obj\\Debug\\net8.0\\webcil\\AutoMapper.wasm"
+    },
     {
       "Identity": "C:\\Users\\Malat\\Desktop\\Code\\net\\EmployeeManagementSystemEx\\Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\BaseLibrary.pdb",
       "SourceId": "Client",
@@ -7931,6 +7950,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Malat\\Desktop\\Code\\net\\EmployeeManagementSystemEx\\Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.IO.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\Malat\\Desktop\\Code\\net\\EmployeeManagementSystemEx\\Client\\obj\\Debug\\net8.0\\compressed\\zzcnlh7x2g.gz",
+      "SourceId": "Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Malat\\Desktop\\Code\\net\\EmployeeManagementSystemEx\\Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/AutoMapper.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Malat\\Desktop\\Code\\net\\EmployeeManagementSystemEx\\Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\AutoMapper.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Malat\\Desktop\\Code\\net\\EmployeeManagementSystemEx\\Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\AutoMapper.wasm"
     },
     {
       "Identity": "C:\\Users\\Malat\\Desktop\\Code\\net\\EmployeeManagementSystemEx\\Client\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Client.styles.css",

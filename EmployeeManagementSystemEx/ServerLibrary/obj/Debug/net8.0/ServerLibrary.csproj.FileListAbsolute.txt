@@ -10,3 +10,9 @@ C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\ServerLibrary\obj\Deb
 C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\ServerLibrary\obj\Debug\net8.0\refint\ServerLibrary.dll
 C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\ServerLibrary\obj\Debug\net8.0\ServerLibrary.pdb
 C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\ServerLibrary\obj\Debug\net8.0\ref\ServerLibrary.dll
+C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\ServerLibrary\bin\Debug\net8.0\ServerLibrary.runtimeconfig.json
+C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\ServerLibrary\bin\Debug\net8.0\BaseLibrary.dll
+C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\ServerLibrary\bin\Debug\net8.0\BaseLibrary.pdb
+C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\ServerLibrary\obj\Debug\net8.0\ServerLibrary.csproj.AssemblyReference.cache
+C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\ServerLibrary\obj\Debug\net8.0\ServerLibrary.csproj.CopyComplete
+C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\ServerLibrary\obj\Debug\net8.0\ServerLibrary.genruntimeconfig.cache

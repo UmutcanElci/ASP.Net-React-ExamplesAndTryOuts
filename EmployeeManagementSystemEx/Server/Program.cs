@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using ServerLibrary.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +9,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
+
+//starting
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection") ??
+                         throw new InvalidOperationException("Sorry, your connection is not found!"));
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

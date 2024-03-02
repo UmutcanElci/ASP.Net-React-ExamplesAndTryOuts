@@ -20,4 +20,7 @@
 <ItemGroup>
   <Folder Include="Repositories\" />
 </ItemGroup>
+<ItemGroup>
+  <ProjectReference Include="..\BaseLibrary\BaseLibrary.csproj" />
+</ItemGroup>
 </Project>
