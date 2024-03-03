@@ -835,7 +835,6 @@ C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\Client\obj\Debug\net8
 C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\Client\obj\Debug\net8.0\scopedcss\Layout\NavMenu.razor.rz.scp.css
 C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\Client\obj\Debug\net8.0\scopedcss\bundle\Client.styles.css
 C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\Client\obj\Debug\net8.0\scopedcss\projectbundle\Client.bundle.scp.css
-C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\Client\obj\Debug\net8.0\compressed\wx9ou5jlnj.gz
 C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\Client\obj\Debug\net8.0\compressed\oh6kjdh6s2.gz
 C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\Client\obj\Debug\net8.0\compressed\y01ab2e173.gz
 C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\Client\obj\Debug\net8.0\compressed\nypljevki8.gz
@@ -1053,3 +1052,4 @@ C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\Client\bin\Debug\net8
 C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\Client\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\Client\obj\Debug\net8.0\webcil\AutoMapper.wasm
 C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\Client\obj\Debug\net8.0\compressed\zzcnlh7x2g.gz
+C:\Users\Malat\Desktop\Code\net\EmployeeManagementSystemEx\Client\obj\Debug\net8.0\compressed\wx9ou5jlnj.gz
