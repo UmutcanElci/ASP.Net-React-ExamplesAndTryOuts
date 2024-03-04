@@ -1,0 +1,12 @@
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagementDomain\bin\Debug\net8.0\HR.LeaveManagementDomain.deps.json
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagementDomain\bin\Debug\net8.0\HR.LeaveManagementDomain.dll
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagementDomain\bin\Debug\net8.0\HR.LeaveManagementDomain.pdb
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagementDomain\obj\Debug\net8.0\HR.LeaveManagementDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagementDomain\obj\Debug\net8.0\HR.LeaveManagementDomain.AssemblyInfoInputs.cache
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagementDomain\obj\Debug\net8.0\HR.LeaveManagementDomain.AssemblyInfo.cs
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagementDomain\obj\Debug\net8.0\HR.LeaveManagementDomain.csproj.CoreCompileInputs.cache
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagementDomain\obj\Debug\net8.0\HR.LeaveManagementDomain.sourcelink.json
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagementDomain\obj\Debug\net8.0\HR.LeaveManagementDomain.dll
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagementDomain\obj\Debug\net8.0\refint\HR.LeaveManagementDomain.dll
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagementDomain\obj\Debug\net8.0\HR.LeaveManagementDomain.pdb
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagementDomain\obj\Debug\net8.0\ref\HR.LeaveManagementDomain.dll

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Malat\\Desktop\\Code\\net\\CleanArchitecture\\CleanArchitectureEx\\CleanArchitectureEx.csproj": {}
+    "C:\\Users\\Malat\\Desktop\\Code\\net\\CleanArchitecture\\HR.LeaveManagementDomain\\HR.LeaveManagementDomain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Malat\\Desktop\\Code\\net\\CleanArchitecture\\CleanArchitectureEx\\CleanArchitectureEx.csproj": {
+    "C:\\Users\\Malat\\Desktop\\Code\\net\\CleanArchitecture\\HR.LeaveManagementDomain\\HR.LeaveManagementDomain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Malat\\Desktop\\Code\\net\\CleanArchitecture\\CleanArchitectureEx\\CleanArchitectureEx.csproj",
-        "projectName": "CleanArchitectureEx",
-        "projectPath": "C:\\Users\\Malat\\Desktop\\Code\\net\\CleanArchitecture\\CleanArchitectureEx\\CleanArchitectureEx.csproj",
+        "projectUniqueName": "C:\\Users\\Malat\\Desktop\\Code\\net\\CleanArchitecture\\HR.LeaveManagementDomain\\HR.LeaveManagementDomain.csproj",
+        "projectName": "HR.LeaveManagementDomain",
+        "projectPath": "C:\\Users\\Malat\\Desktop\\Code\\net\\CleanArchitecture\\HR.LeaveManagementDomain\\HR.LeaveManagementDomain.csproj",
         "packagesPath": "C:\\Users\\Malat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Malat\\Desktop\\Code\\net\\CleanArchitecture\\CleanArchitectureEx\\obj\\",
+        "outputPath": "C:\\Users\\Malat\\Desktop\\Code\\net\\CleanArchitecture\\HR.LeaveManagementDomain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Malat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -51,9 +51,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
