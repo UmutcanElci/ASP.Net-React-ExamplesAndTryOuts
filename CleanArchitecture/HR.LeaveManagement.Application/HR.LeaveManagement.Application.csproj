@@ -10,4 +10,9 @@
       <ProjectReference Include="..\HR.LeaveManagementDomain\HR.LeaveManagementDomain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="13.0.1" />
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    </ItemGroup>
+
 </Project>

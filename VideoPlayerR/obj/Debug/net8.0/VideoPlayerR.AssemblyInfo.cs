@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VideoPlayerR")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c843017f3004af15511c746723d139ebada37c26")]
 [assembly: System.Reflection.AssemblyProductAttribute("VideoPlayerR")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VideoPlayerR")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
