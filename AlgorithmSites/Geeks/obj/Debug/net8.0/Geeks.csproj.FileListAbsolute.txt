@@ -1,0 +1,15 @@
+C:\Users\Malat\Desktop\Code\net\AlgorithmSites\Geeks\bin\Debug\net8.0\Geeks.exe
+C:\Users\Malat\Desktop\Code\net\AlgorithmSites\Geeks\bin\Debug\net8.0\Geeks.deps.json
+C:\Users\Malat\Desktop\Code\net\AlgorithmSites\Geeks\bin\Debug\net8.0\Geeks.runtimeconfig.json
+C:\Users\Malat\Desktop\Code\net\AlgorithmSites\Geeks\bin\Debug\net8.0\Geeks.dll
+C:\Users\Malat\Desktop\Code\net\AlgorithmSites\Geeks\bin\Debug\net8.0\Geeks.pdb
+C:\Users\Malat\Desktop\Code\net\AlgorithmSites\Geeks\obj\Debug\net8.0\Geeks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Malat\Desktop\Code\net\AlgorithmSites\Geeks\obj\Debug\net8.0\Geeks.AssemblyInfoInputs.cache
+C:\Users\Malat\Desktop\Code\net\AlgorithmSites\Geeks\obj\Debug\net8.0\Geeks.AssemblyInfo.cs
+C:\Users\Malat\Desktop\Code\net\AlgorithmSites\Geeks\obj\Debug\net8.0\Geeks.csproj.CoreCompileInputs.cache
+C:\Users\Malat\Desktop\Code\net\AlgorithmSites\Geeks\obj\Debug\net8.0\Geeks.sourcelink.json
+C:\Users\Malat\Desktop\Code\net\AlgorithmSites\Geeks\obj\Debug\net8.0\Geeks.dll
+C:\Users\Malat\Desktop\Code\net\AlgorithmSites\Geeks\obj\Debug\net8.0\refint\Geeks.dll
+C:\Users\Malat\Desktop\Code\net\AlgorithmSites\Geeks\obj\Debug\net8.0\Geeks.pdb
+C:\Users\Malat\Desktop\Code\net\AlgorithmSites\Geeks\obj\Debug\net8.0\Geeks.genruntimeconfig.cache
+C:\Users\Malat\Desktop\Code\net\AlgorithmSites\Geeks\obj\Debug\net8.0\ref\Geeks.dll

@@ -1,0 +1,5 @@
+C:\Users\Malat\Desktop\Code\net\AlgorithmSites\CodeWars\obj\Debug\net8.0\CodeWars.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Malat\Desktop\Code\net\AlgorithmSites\CodeWars\obj\Debug\net8.0\CodeWars.AssemblyInfoInputs.cache
+C:\Users\Malat\Desktop\Code\net\AlgorithmSites\CodeWars\obj\Debug\net8.0\CodeWars.AssemblyInfo.cs
+C:\Users\Malat\Desktop\Code\net\AlgorithmSites\CodeWars\obj\Debug\net8.0\CodeWars.csproj.CoreCompileInputs.cache
+C:\Users\Malat\Desktop\Code\net\AlgorithmSites\CodeWars\obj\Debug\net8.0\CodeWars.sourcelink.json
