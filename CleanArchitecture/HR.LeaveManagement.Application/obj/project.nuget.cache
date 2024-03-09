@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "T+NOtkwfPe+J9v2CV0e1XjEyibYCL3t+zm5S9AVqpMJmvFHICHCnGsYcgOHKtYZEHxtvurO0a/UrY49OVz1bbA==",
+  "dgSpecHash": "ttqd+7J5iIx/rsJoK8GldPcZcY8+EuWqqH6YSOGXBbAomG7czMZLYEZ4sLYq4s5mexCDcXd6CkwIbKQwWTEGug==",
   "success": true,
   "projectFilePath": "C:\\Users\\Malat\\Desktop\\Code\\net\\CleanArchitecture\\HR.LeaveManagement.Application\\HR.LeaveManagement.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Malat\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
-    "C:\\Users\\Malat\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Malat\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\Malat\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\Malat\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Malat\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\Malat\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\Malat\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
