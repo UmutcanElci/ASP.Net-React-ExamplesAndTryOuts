@@ -2,17 +2,19 @@
 
 public class MissingNumberInArray
 {
-    public int MissingNumber(int[] arr, int n)
-    {
-        int miss = 1;
-        for (int i = 0; i < n-1; i++){
-            if (arr[i] != miss){
-                miss = arr[i];
-                return  miss;
+    
+        public int MissingNumber(int[] arr, int n)
+        {
+            int expectedSum = (n * (n + 1)) / 2; 
+            int actualSum = 0;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                actualSum += arr[i];
             }
-             
+
+            return expectedSum - actualSum;
         }
-        
-        return miss;
-    }
+    
+
 }
