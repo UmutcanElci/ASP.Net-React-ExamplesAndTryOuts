@@ -2,7 +2,7 @@
 
 public class LeaveRequestListDto
 {
-    public LeaveTypeDto LeaveType { get; set; }
+    public LeaveTypeDto? LeaveType { get; set; }
     public DateTime DateRequested { get; set; }
     public bool? Aprroved { get; set; }
 }

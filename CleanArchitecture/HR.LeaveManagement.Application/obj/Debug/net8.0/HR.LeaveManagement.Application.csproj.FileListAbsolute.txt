@@ -1,0 +1,16 @@
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagement.Application\bin\Debug\net8.0\HR.LeaveManagement.Application.deps.json
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagement.Application\bin\Debug\net8.0\HR.LeaveManagement.Application.dll
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagement.Application\bin\Debug\net8.0\HR.LeaveManagement.Application.pdb
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagement.Application\bin\Debug\net8.0\HR.LeaveManagementDomain.dll
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagement.Application\bin\Debug\net8.0\HR.LeaveManagementDomain.pdb
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagement.Application\obj\Debug\net8.0\HR.LeaveManagement.Application.csproj.AssemblyReference.cache
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagement.Application\obj\Debug\net8.0\HR.LeaveManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagement.Application\obj\Debug\net8.0\HR.LeaveManagement.Application.AssemblyInfoInputs.cache
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagement.Application\obj\Debug\net8.0\HR.LeaveManagement.Application.AssemblyInfo.cs
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagement.Application\obj\Debug\net8.0\HR.LeaveManagement.Application.csproj.CoreCompileInputs.cache
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagement.Application\obj\Debug\net8.0\HR.LeaveManagement.Application.sourcelink.json
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagement.Application\obj\Debug\net8.0\HR.LeaveManagement.Application.csproj.CopyComplete
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagement.Application\obj\Debug\net8.0\HR.LeaveManagement.Application.dll
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagement.Application\obj\Debug\net8.0\refint\HR.LeaveManagement.Application.dll
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagement.Application\obj\Debug\net8.0\HR.LeaveManagement.Application.pdb
+C:\Users\Malat\Desktop\Code\net\CleanArchitecture\HR.LeaveManagement.Application\obj\Debug\net8.0\ref\HR.LeaveManagement.Application.dll
