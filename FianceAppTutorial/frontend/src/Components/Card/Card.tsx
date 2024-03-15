@@ -1,7 +1,12 @@
 
 import React, { FC } from 'react';
 import "./Card.css"
-const Card: FC = () => {
+interface Props{
+companyName: string;
+ticker: string;
+price: number;
+}
+const Card : React.FC<Props> = ({companyName,ticker,price}: Props):JSX.Element => {
   return (
       <>
     <div className="card">
@@ -11,8 +16,8 @@ const Card: FC = () => {
       />
     </div>
   <div className="details">
-      <h2>APPL</h2>
-      <p>$110</p>
+      <h2>{companyName} : {ticker}</h2>
+      <p>${price}</p>
   </div>
       <div>
         <p className="info">

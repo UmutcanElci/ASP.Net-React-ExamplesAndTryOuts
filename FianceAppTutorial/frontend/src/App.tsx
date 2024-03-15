@@ -1,12 +1,19 @@
 import React from 'react';
 import './App.css';
-import Card from "./Components/Card/Card";
+import CardList from "./Components/CardList/CardList";
+import SearchComponent from "./Components/Search/SearchComponent";
+
 
 function App() {
   return (
+    <>
     <div className="App">
-      <Card/>
+
+      <SearchComponent/>
+      <CardList />
+
     </div>
+    </>
   );
 }
 
