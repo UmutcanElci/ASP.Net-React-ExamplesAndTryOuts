@@ -1,6 +1,6 @@
-
 import React, {ChangeEvent, FC, SyntheticEvent, useState} from "react";
 
+// Props that need from the App.tsx(Data flow)
 interface Props {
     onClick: (e : SyntheticEvent) => void;
     search: string | undefined;

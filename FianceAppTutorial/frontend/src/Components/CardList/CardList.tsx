@@ -1,4 +1,3 @@
-
 import React, { FC } from 'react';
 import Card from "../Card/Card";
 

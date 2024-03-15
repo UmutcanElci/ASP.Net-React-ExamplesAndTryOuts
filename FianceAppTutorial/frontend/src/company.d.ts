@@ -1,3 +1,4 @@
+// For API of financialmodelingprep that help us to take data 
 export interface CompanySearch {
   currency: string;
   exchangeShortName: string;

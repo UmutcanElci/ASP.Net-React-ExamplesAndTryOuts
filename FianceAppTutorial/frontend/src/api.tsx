@@ -7,7 +7,7 @@ interface Company {
 interface SearchResponse {
   data: Company[];
 }
-
+// Searching the company
 export const searchCompanies = async (query: string): Promise<SearchResponse | string> => {
   try {
     const response: AxiosResponse<SearchResponse> = await axios.get(
