@@ -18,13 +18,14 @@ function App() {
     console.log(e);
   }
 
-  const onClick = async (e : React.SyntheticEvent) => {
+  const onClick = async (e : SyntheticEvent) => {
       e.preventDefault();
       const result = await searchCompanies(search);
       if (typeof result === "string"){
         setServerError(result);
       } else if (Array.isArray(result.data)) {
-          setSearchResult(result.data);
+          const companies = result.data as CompanySearch[];
+          setSearchResult(companies);
       }
       console.log(searchResult);
     }
