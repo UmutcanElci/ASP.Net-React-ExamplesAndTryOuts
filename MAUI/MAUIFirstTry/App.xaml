@@ -1,0 +1,16 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<windowsSpecific:Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MAUIFirstTry"
+             xmlns:controls="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
+             xmlns:windowsSpecific="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;assembly=Microsoft.Maui.Controls"
+             x:Class="MAUIFirstTry.App">
+    <controls:Application.Resources>
+        <controls:ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <controls:ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </controls:ResourceDictionary>
+    </controls:Application.Resources>
+</windowsSpecific:Application>
