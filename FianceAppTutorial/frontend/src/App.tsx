@@ -35,7 +35,7 @@ function App() {
 
       <SearchComponent onClick={onClick} search={search} handleChange={handleChange}/>
       {serverError && <h1>{serverError}</h1>} // gives error at console and in page 
-      <CardList />
+      <CardList searchResults={searchResult}/>
 
     </div>
     </>
