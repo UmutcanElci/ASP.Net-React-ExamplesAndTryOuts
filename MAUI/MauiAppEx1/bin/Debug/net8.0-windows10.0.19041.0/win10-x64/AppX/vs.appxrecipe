@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\Malat\Desktop\Code\net\MAUI\MauiAppEx1\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-03-19T10:57:09.371</Modified>
+      <Modified>2024-03-21T20:49:28.365</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Malat\Desktop\Code\net\MAUI\MauiAppEx1\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-03-19T10:57:09.208</Modified>
+      <Modified>2024-03-21T20:49:28.145</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Malat\Desktop\Code\net\MAUI\MauiAppEx1\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MauiAppEx1.runtimeconfig.json">
       <PackagePath>MauiAppEx1.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Malat\Desktop\Code\net\MAUI\MauiAppEx1\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MauiAppEx1.dll">
       <PackagePath>MauiAppEx1.dll</PackagePath>
-      <Modified>2024-03-19T10:57:08.107</Modified>
+      <Modified>2024-03-21T20:49:26.911</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Malat\Desktop\Code\net\MAUI\MauiAppEx1\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MauiAppEx1.exe</PackagePath>
-      <Modified>2024-03-19T10:57:08.119</Modified>
+      <Modified>2024-03-21T20:49:26.961</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Malat\Desktop\Code\net\MAUI\MauiAppEx1\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -287,7 +287,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Malat\Desktop\Code\net\MAUI\MauiAppEx1\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MauiAppEx1.deps.json">
       <PackagePath>MauiAppEx1.deps.json</PackagePath>
-      <Modified>2024-03-19T10:57:08.917</Modified>
+      <Modified>2024-03-21T20:49:27.926</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Malat\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
