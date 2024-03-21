@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MauiTutorial1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+864704b6d2094518aab145ebbcb9072cda154ea5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+0b36502a726fee73890f6d5ca55d962ff13bff0e")]
 [assembly: System.Reflection.AssemblyProductAttribute("MauiTutorial1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MauiTutorial1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

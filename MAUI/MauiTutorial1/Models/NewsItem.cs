@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace MauiTutorial1.Models
 {
-    internal class NewsItem
+    public record NewsItem
     {
+        public string Title { get; set; }
+        public string Body { get; set; }
+        public DateTime Published { get; set; }
+        public string Image { get; set; }
     }
 }

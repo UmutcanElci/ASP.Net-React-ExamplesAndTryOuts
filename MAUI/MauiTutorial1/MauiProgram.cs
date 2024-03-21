@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MauiTutorial1.Services;
+using MauiTutorial1.ViewModels;
+using Microsoft.Extensions.Logging;
+using System;
 
 namespace MauiTutorial1
 {
@@ -15,6 +18,10 @@ namespace MauiTutorial1
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            builder.Services.AddSingleton<INewsService, NewsService>();
+
+            builder.Services.AddTransient<MainViewModel>();
+            builder.Services.AddTransient<ViewModel>();
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif

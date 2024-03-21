@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using TinyMvvm;
+using System;
 namespace MauiTutorial1.ViewModels
 {
-    internal class ViewModel
+    public abstract class ViewModel : TinyViewModel
     {
     }
 }

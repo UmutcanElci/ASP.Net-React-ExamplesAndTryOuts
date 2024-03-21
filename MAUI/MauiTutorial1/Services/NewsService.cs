@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 
 namespace MauiTutorial1.Services
 {
-    public interface INewsService
+    public class NewsService : INewsService
     {
-        Task<List<NewsItem>> Get();
+        public Task<List<NewsItem>> Get()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
