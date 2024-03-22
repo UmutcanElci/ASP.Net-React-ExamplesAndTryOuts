@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MLAppLearn")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76f9e3570fbaec2a236fd116c95812058ae261f9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b4a1baca08e5e1aa0b42c4d8e59ec1d30fc879d")]
 [assembly: System.Reflection.AssemblyProductAttribute("MLAppLearn")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MLAppLearn")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
