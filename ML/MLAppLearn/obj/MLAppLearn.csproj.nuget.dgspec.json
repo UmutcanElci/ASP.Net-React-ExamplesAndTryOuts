@@ -57,6 +57,14 @@
             "Microsoft.ML.FastTree": {
               "target": "Package",
               "version": "[3.0.1, )"
+            },
+            "Microsoft.ML.Vision": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "SciSharp.TensorFlow.Redist": {
+              "target": "Package",
+              "version": "[2.3.1, )"
             }
           },
           "imports": [
