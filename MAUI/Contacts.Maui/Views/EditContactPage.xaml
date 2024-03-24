@@ -47,6 +47,11 @@
         <Button
     x:Name="btnCancel"
     Clicked="btnCancel_Clicked"
-    Text="Cancle" />
+    Text="Cancel" />
+
+        <Button
+  x:Name="btnUpdate"
+  Clicked="btnUpdate_Clicked"
+  Text="Update" />
     </VerticalStackLayout>
 </ContentPage>
