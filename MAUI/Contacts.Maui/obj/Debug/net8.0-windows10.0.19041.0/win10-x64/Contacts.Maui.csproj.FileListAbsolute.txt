@@ -154,7 +154,6 @@ C:\Users\Malat\Desktop\Code\net\MAUI\Contacts.Maui\obj\Debug\net8.0-windows10.0.
 C:\Users\Malat\Desktop\Code\net\MAUI\Contacts.Maui\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Contacts.Maui.csproj.CoreCompileInputs.cache
 C:\Users\Malat\Desktop\Code\net\MAUI\Contacts.Maui\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Contacts.Maui.sourcelink.json
 C:\Users\Malat\Desktop\Code\net\MAUI\Contacts.Maui\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\XamlC.stamp
-C:\Users\Malat\Desktop\Code\net\MAUI\Contacts.Maui\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Contacts.Maui.csproj.CopyComplete
 C:\Users\Malat\Desktop\Code\net\MAUI\Contacts.Maui\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Contacts.Maui.dll
 C:\Users\Malat\Desktop\Code\net\MAUI\Contacts.Maui\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\refint\Contacts.Maui.dll
 C:\Users\Malat\Desktop\Code\net\MAUI\Contacts.Maui\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Contacts.Maui.pdb
@@ -176,3 +175,4 @@ C:\Users\Malat\Desktop\Code\net\MAUI\Contacts.Maui\obj\Debug\net8.0-windows10.0.
 C:\Users\Malat\Desktop\Code\net\MAUI\Contacts.Maui\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\Malat\Desktop\Code\net\MAUI\Contacts.Maui\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Malat\Desktop\Code\net\MAUI\Contacts.Maui\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\Users\Malat\Desktop\Code\net\MAUI\Contacts.Maui\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Contacts.DCE49912.Up2Date

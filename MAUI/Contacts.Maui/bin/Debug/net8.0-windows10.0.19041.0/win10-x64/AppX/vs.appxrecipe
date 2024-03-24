@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\Malat\Desktop\Code\net\MAUI\Contacts.Maui\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-03-22T12:35:21.637</Modified>
+      <Modified>2024-03-24T19:07:48.387</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Malat\Desktop\Code\net\MAUI\Contacts.Maui\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-03-22T12:35:21.443</Modified>
+      <Modified>2024-03-24T19:07:48.208</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Malat\Desktop\Code\net\MAUI\Contacts.Maui\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Contacts.Maui.runtimeconfig.json">
       <PackagePath>Contacts.Maui.runtimeconfig.json</PackagePath>
-      <Modified>2024-03-22T12:35:21.213</Modified>
+      <Modified>2024-03-24T19:07:47.996</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Malat\Desktop\Code\net\MAUI\Contacts.Maui\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Contacts.Maui.dll">
       <PackagePath>Contacts.Maui.dll</PackagePath>
-      <Modified>2024-03-22T12:35:20.013</Modified>
+      <Modified>2024-03-24T19:07:46.748</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Malat\Desktop\Code\net\MAUI\Contacts.Maui\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Contacts.Maui.exe</PackagePath>
-      <Modified>2024-03-22T12:35:20.028</Modified>
+      <Modified>2024-03-24T19:07:46.795</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Malat\Desktop\Code\net\MAUI\Contacts.Maui\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -287,7 +287,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Malat\Desktop\Code\net\MAUI\Contacts.Maui\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Contacts.Maui.deps.json">
       <PackagePath>Contacts.Maui.deps.json</PackagePath>
-      <Modified>2024-03-22T12:35:21.103</Modified>
+      <Modified>2024-03-24T19:07:47.873</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Malat\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
