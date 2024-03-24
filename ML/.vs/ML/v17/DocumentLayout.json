@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Malat\\Desktop\\Code\\net\\ML\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B0E947CA-683C-486D-8F2A-C48E53C00E08}|MLAppLearn\\MLAppLearn.csproj|c:\\users\\malat\\desktop\\code\\net\\ml\\mlapplearn\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0E947CA-683C-486D-8F2A-C48E53C00E08}|MLAppLearn\\MLAppLearn.csproj|solutionrelative:mlapplearn\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0E947CA-683C-486D-8F2A-C48E53C00E08}|MLAppLearn\\MLAppLearn.csproj|c:\\users\\malat\\desktop\\code\\net\\ml\\mlapplearn\\imagetest\\imagepeachfruit.mbconfig||{93FA4DC3-61EC-47AF-B0BA-50CAD3CAF049}",
+      "RelativeMoniker": "D:0:0:{B0E947CA-683C-486D-8F2A-C48E53C00E08}|MLAppLearn\\MLAppLearn.csproj|solutionrelative:mlapplearn\\imagetest\\imagepeachfruit.mbconfig||{93FA4DC3-61EC-47AF-B0BA-50CAD3CAF049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0E947CA-683C-486D-8F2A-C48E53C00E08}|MLAppLearn\\MLAppLearn.csproj|C:\\Users\\Malat\\Desktop\\Code\\net\\ML\\mlapplearn\\sentimentmodel.mbconfig||{93FA4DC3-61EC-47AF-B0BA-50CAD3CAF049}",
-      "RelativeMoniker": "D:0:0:{B0E947CA-683C-486D-8F2A-C48E53C00E08}|MLAppLearn\\MLAppLearn.csproj|solutionrelative:mlapplearn\\sentimentmodel.mbconfig||{93FA4DC3-61EC-47AF-B0BA-50CAD3CAF049}"
+      "AbsoluteMoniker": "D:0:0:{B0E947CA-683C-486D-8F2A-C48E53C00E08}|MLAppLearn\\MLAppLearn.csproj|c:\\users\\malat\\desktop\\code\\net\\ml\\mlapplearn\\mlapplearn.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B0E947CA-683C-486D-8F2A-C48E53C00E08}|MLAppLearn\\MLAppLearn.csproj|solutionrelative:mlapplearn\\mlapplearn.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0E947CA-683C-486D-8F2A-C48E53C00E08}|MLAppLearn\\MLAppLearn.csproj|c:\\users\\malat\\desktop\\code\\net\\ml\\mlapplearn\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0E947CA-683C-486D-8F2A-C48E53C00E08}|MLAppLearn\\MLAppLearn.csproj|solutionrelative:mlapplearn\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,22 +22,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SentimentModel.mbconfig",
-              "DocumentMoniker": "C:\\Users\\Malat\\Desktop\\Code\\net\\ML\\MLAppLearn\\SentimentModel.mbconfig",
-              "RelativeDocumentMoniker": "MLAppLearn\\SentimentModel.mbconfig",
-              "ToolTip": "C:\\Users\\Malat\\Desktop\\Code\\net\\ML\\MLAppLearn\\SentimentModel.mbconfig",
-              "RelativeToolTip": "MLAppLearn\\SentimentModel.mbconfig",
+              "DocumentIndex": 0,
+              "Title": "ImagePeachFruit.mbconfig",
+              "DocumentMoniker": "C:\\Users\\Malat\\Desktop\\Code\\net\\ML\\MLAppLearn\\ImageTest\\ImagePeachFruit.mbconfig",
+              "RelativeDocumentMoniker": "MLAppLearn\\ImageTest\\ImagePeachFruit.mbconfig",
+              "ToolTip": "C:\\Users\\Malat\\Desktop\\Code\\net\\ML\\MLAppLearn\\ImageTest\\ImagePeachFruit.mbconfig",
+              "RelativeToolTip": "MLAppLearn\\ImageTest\\ImagePeachFruit.mbconfig",
               "Icon": "7f5c38b0-f0bc-4551-a9a8-b4f467cc4670.000012|",
-              "WhenOpened": "2024-03-22T16:17:49.69Z"
+              "WhenOpened": "2024-03-22T20:40:21.865Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "MLAppLearn",
+              "DocumentMoniker": "C:\\Users\\Malat\\Desktop\\Code\\net\\ML\\MLAppLearn\\MLAppLearn.csproj",
+              "RelativeDocumentMoniker": "MLAppLearn\\MLAppLearn.csproj",
+              "ToolTip": "C:\\Users\\Malat\\Desktop\\Code\\net\\ML\\MLAppLearn\\MLAppLearn.csproj",
+              "RelativeToolTip": "MLAppLearn\\MLAppLearn.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-22T20:32:06.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Malat\\Desktop\\Code\\net\\ML\\MLAppLearn\\Program.cs",
               "RelativeDocumentMoniker": "MLAppLearn\\Program.cs",
