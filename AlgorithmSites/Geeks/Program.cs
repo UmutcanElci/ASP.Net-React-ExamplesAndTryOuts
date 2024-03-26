@@ -4,8 +4,10 @@ using Geeks;
 
 Console.WriteLine("Hello, World!");
 
-MissingNumberInArray a = new MissingNumberInArray();
-int[] arr1 = { 1, 2, 3, 5 };
+FindDublicatesInArray a = new FindDublicatesInArray();
 
-Console.WriteLine(a.MissingNumber(arr1, 5));
+long[] arr1 = { 0 ,3 ,1 ,2 };
+a.duplicates(arr1, 4);
+
+Console.WriteLine(a.duplicates(arr1, 4));
 
