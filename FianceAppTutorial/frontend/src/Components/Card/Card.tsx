@@ -13,15 +13,16 @@ const Card : React.FC<Props> = ({id,searchResult}: Props):JSX.Element => {
       <img
           alt="company logo"
       />
-    </div>
+
   <div className="details">
       <h2>{searchResult.name} : {searchResult.symbol}</h2>
       <p>{searchResult.currency}</p>
   </div>
+    </div>
       <div>
-        <p className="info">
-            {searchResult.exchangeShortName} - {searchResult.stockExchange}
-        </p>  
+          <p className="info">
+              {searchResult.exchangeShortName} - {searchResult.stockExchange}
+          </p>
       </div>
       </>
   );

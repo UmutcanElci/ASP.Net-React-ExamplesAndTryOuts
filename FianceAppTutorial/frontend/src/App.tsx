@@ -19,14 +19,19 @@ function App() {
   }
 
   const onClick = async (e : SyntheticEvent) => {
-      e.preventDefault();
+
+    try {
       const result = await searchCompanies(search);
-      if (typeof result === "string"){
+      if (typeof result === "string") {
         setServerError(result);
-      } else if (Array.isArray(result.data)) {
-          const companies = result.data as CompanySearch[];
-          setSearchResult(companies);
+      } else {
+        const companies: CompanySearch[] = Object.values(result); //Old  usage result.data news is Object.values
+        setSearchResult(companies);
       }
+
+    } catch (error) {
+      setServerError("An error occurred while fetching data.");
+    }
       console.log(searchResult);
     }
   return (
@@ -34,11 +39,9 @@ function App() {
     <div className="App">
 
       <SearchComponent onClick={onClick} search={search} handleChange={handleChange}/>
-      
+      <CardList searchResults={searchResult}/>
       {serverError && <h1>{serverError}</h1>} // gives error at console and in page
       
-      <CardList searchResults={searchResult}/>
-
     </div>
     </>
   );
