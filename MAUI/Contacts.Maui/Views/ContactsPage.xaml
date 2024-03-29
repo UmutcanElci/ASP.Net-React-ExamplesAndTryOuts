@@ -4,24 +4,47 @@
              x:Class="Contacts.Maui.Views.ContactsPage"
              Title="Contacts">
 
-    <ListView 
-        x:Name="listContacts" 
-        BackgroundColor="Transparent"
-        SeparatorColor="RoyalBlue"
-        RowHeight="60"
-        ItemSelected="listContacts_ItemSelected"
-        ItemTapped="listContacts_ItemTapped"
-        >
 
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding Name}"
-                          Detail="{Binding Email}"
-                 >
-                    
-                </TextCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-        
-    </ListView>
+    <Grid RowDefinitions="*,50" ColumnDefinitions="*" Padding="10">
+        <ListView 
+     Grid.Row="0"
+     Grid.Column="0"
+     x:Name="listContacts" 
+     BackgroundColor="Transparent"
+     SeparatorColor="RoyalBlue"
+     RowHeight="60"
+     ItemSelected="listContacts_ItemSelected"
+     ItemTapped="listContacts_ItemTapped"
+     >
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}"
+                       Detail="{Binding Email}">
+                        <TextCell.ContextActions>
+                            <MenuItem 
+                            Text="Delete" 
+                            IsDestructive="True" 
+                            Clicked="Delete_Clicked"
+                            CommandParameter="{Binding .}"    ></MenuItem>
+                        </TextCell.ContextActions>
+
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+        <Button
+            Grid.Row="1"
+            Grid.Column="0"
+            x:Name="btnAdd"
+            Text="Add Contact"
+            Clicked="btnAdd_Clicked"
+            
+            >
+            
+        </Button>
+    </Grid>
+   
 </ContentPage>

@@ -22,9 +22,7 @@ public partial class ContactsPage : ContentPage
     {
         base.OnAppearing();
 
-        var contacts = new ObservableCollection<Contact>(ContactRepository.GetContacts());
-
-        listContacts.ItemsSource = contacts;
+        
     }
 
 
@@ -41,8 +39,25 @@ public partial class ContactsPage : ContentPage
         listContacts.SelectedItem = null;
     }
 
-    private void btnAdd_Clicked()
+    private void btnAdd_Clicked(object sender, EventArgs e)
     {
+        Shell.Current.GoToAsync(nameof(AddContactPage));
+    }
 
+    private void Delete_Clicked(object sender, EventArgs e)
+    {
+        var menuTime = sender as MenuItem;
+        var contact = menuTime.CommandParameter as Contact;
+
+        ContactRepository.DeleteContact(contact.ContactId);
+
+        LoadContacts();
+    }
+
+    private void LoadContacts()
+    {
+        var contacts = new ObservableCollection<Contact>(ContactRepository.GetContacts());
+
+        listContacts.ItemsSource = contacts;
     }
 }
