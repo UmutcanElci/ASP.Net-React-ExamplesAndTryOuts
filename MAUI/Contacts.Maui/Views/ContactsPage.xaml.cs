@@ -40,4 +40,9 @@ public partial class ContactsPage : ContentPage
     {
         listContacts.SelectedItem = null;
     }
+
+    private void btnAdd_Clicked()
+    {
+
+    }
 }
