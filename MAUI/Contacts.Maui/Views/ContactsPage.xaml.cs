@@ -60,4 +60,9 @@ public partial class ContactsPage : ContentPage
 
         listContacts.ItemsSource = contacts;
     }
+
+    private void SearchBar_TextChanged()
+    {
+
+    }
 }
