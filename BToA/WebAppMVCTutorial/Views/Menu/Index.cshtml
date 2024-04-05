@@ -1,0 +1,27 @@
+﻿@page
+@model List<WebAppMVCTutorial.Models.Dish>
+
+@{
+    ViewData["Title"] = "MenuIndex";
+}
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-6">
+                <div>
+                    <h4>@item.Name</h4>
+                </div>
+                
+                <div>
+                    <h4>@item.ImageUrl</h4>
+                </div>
+                <div>
+                    <h4>@item.price</h4>
+                </div>
+                
+            </div>
+        }
+    </div>
+</div>
