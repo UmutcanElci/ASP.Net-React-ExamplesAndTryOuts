@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using WebAppMVCTutorial.Data;
-using WebAppMVCTutorial.Data;
+
 
 var builder = WebApplication.CreateBuilder(args);
 

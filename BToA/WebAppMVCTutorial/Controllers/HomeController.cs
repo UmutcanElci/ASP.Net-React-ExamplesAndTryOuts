@@ -7,15 +7,11 @@ namespace WebAppMVCTutorial.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly MenuContext _context;
-
-    public HomeController(MenuContext context)
+    public ActionResult Index()
     {
-        _context = context;
+        return View();
     }
+  
 
-    public async Task<IActionResult> Index()
-    {
-        return View(await _context.Dishes.ToListAsync());
-    }
+    
 }
