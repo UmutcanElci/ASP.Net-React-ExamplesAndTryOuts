@@ -1,0 +1,71 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ConsoleApp1/1.0.0": {
+        "dependencies": {
+          "Spectre.Console": "0.48.1-preview.0.38",
+          "Spectre.Console.Cli": "0.48.1-preview.0.38"
+        },
+        "runtime": {
+          "ConsoleApp1.dll": {}
+        }
+      },
+      "Spectre.Console/0.48.1-preview.0.38": {
+        "runtime": {
+          "lib/net8.0/Spectre.Console.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.48.1.0"
+          }
+        }
+      },
+      "Spectre.Console.Cli/0.48.1-preview.0.38": {
+        "dependencies": {
+          "Spectre.Console": "0.48.1-preview.0.38"
+        },
+        "runtime": {
+          "lib/net8.0/Spectre.Console.Cli.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.48.1.0"
+          }
+        },
+        "resources": {
+          "lib/net8.0/de/Spectre.Console.Cli.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net8.0/fr/Spectre.Console.Cli.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net8.0/sv/Spectre.Console.Cli.resources.dll": {
+            "locale": "sv"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ConsoleApp1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Spectre.Console/0.48.1-preview.0.38": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oWbsBq8aHh2Ckhn5IQ4Lj9z3sU9JS/xUZ8mki08GboF3+OuR5b6iKMmUahsIMoZkm+6X67g03GRrk9UpwEujVw==",
+      "path": "spectre.console/0.48.1-preview.0.38",
+      "hashPath": "spectre.console.0.48.1-preview.0.38.nupkg.sha512"
+    },
+    "Spectre.Console.Cli/0.48.1-preview.0.38": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7XloBvJtsg8fIpmHs/YAR+lI5SA8IypdmRPTTiA7H+0CJhYi6SKnn73pzU2KkI7AubHeYfwv7uvZ1N95+B90+g==",
+      "path": "spectre.console.cli/0.48.1-preview.0.38",
+      "hashPath": "spectre.console.cli.0.48.1-preview.0.38.nupkg.sha512"
+    }
+  }
+}
