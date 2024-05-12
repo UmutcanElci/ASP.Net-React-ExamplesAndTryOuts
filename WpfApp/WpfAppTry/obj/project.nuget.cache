@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "IMf6n4Gfxk4bEOyF67E1vFqfH2dve6srFeHm+1lNgxZeFJUKk486Ki6sZWnVjsIl1BSxAlygUGw8TJs6D4CKlQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Malat\\Desktop\\Code\\net\\WpfApp\\WpfAppTry\\WpfAppTry.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Malat\\.nuget\\packages\\materialdesigncolors\\3.0.0\\materialdesigncolors.3.0.0.nupkg.sha512",
+    "C:\\Users\\Malat\\.nuget\\packages\\materialdesignthemes\\5.0.0\\materialdesignthemes.5.0.0.nupkg.sha512",
+    "C:\\Users\\Malat\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
+  "logs": []
+}

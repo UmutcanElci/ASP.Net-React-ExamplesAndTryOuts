@@ -7,28 +7,22 @@ public partial class ContactsPage : ContentPage
 {
 	public ContactsPage()
 	{
-		InitializeComponent();
-
-		//List<string> contacts = new List<string>() {
-		//	"John Doe",
-		//	"Jane Doe",
-		//	"Tom Hanks",
-		//	"Frank Liu"
-		//};
-		
-	}
+        InitializeComponent();
+    }
 
     protected override void OnAppearing()
     {
         base.OnAppearing();
 
+        SearchBar.Text = string.Empty;
         
+        LoadContacts();
     }
 
 
     private async void listContacts_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
-		if(listContacts.SelectedItem != null)
+        if (listContacts.SelectedItem != null)
 		{
 			await Shell.Current.GoToAsync($"{nameof(EditContactPage)}?Id={((Contact)listContacts.SelectedItem).ContactId}");
 		}
@@ -61,8 +55,12 @@ public partial class ContactsPage : ContentPage
         listContacts.ItemsSource = contacts;
     }
 
-    private void SearchBar_TextChanged()
+    private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
     {
+        var contacts = new ObservableCollection<Contact>(ContactRepository.SearchContacts(((SearchBar)sender).Text));
 
+        listContacts.ItemsSource = contacts;
     }
+
+    
 }

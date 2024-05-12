@@ -2,4 +2,7 @@
 using Spectre.Console;
 
 
-AnsiConsole.Markup("Hello, [red]World![/]");
+AnsiConsole.Markup("[green]Name | Value[/]"); 
+
+
+Console.WriteLine("\n hi");
