@@ -28,4 +28,49 @@ public partial class MainWindow : Window
             this.DragMove();
         }
     }
+
+    private void Dashboard_Click(object sender, RoutedEventArgs e)
+    {
+        DashboardContent.Visibility = Visibility.Visible;
+        RegisterContent.Visibility = Visibility.Collapsed;
+        ClassContent.Visibility = Visibility.Collapsed;
+        TeacherContent.Visibility = Visibility.Collapsed;
+        InfoContent.Visibility = Visibility.Collapsed;
+    }
+
+    private void Users_Click(object sender, RoutedEventArgs e)
+    {
+        DashboardContent.Visibility = Visibility.Collapsed;
+        RegisterContent.Visibility = Visibility.Visible;
+        ClassContent.Visibility = Visibility.Collapsed;
+        TeacherContent.Visibility = Visibility.Collapsed;
+        InfoContent.Visibility = Visibility.Collapsed;
+    }
+    
+    private void Class_Click(object sender, RoutedEventArgs e)
+    {
+        DashboardContent.Visibility = Visibility.Collapsed;
+        RegisterContent.Visibility = Visibility.Collapsed;
+        ClassContent.Visibility = Visibility.Visible;
+        TeacherContent.Visibility = Visibility.Collapsed;
+        InfoContent.Visibility = Visibility.Collapsed;
+    }
+    
+    private void Teacher_Click(object sender, RoutedEventArgs e)
+    {
+        DashboardContent.Visibility = Visibility.Collapsed;
+        RegisterContent.Visibility = Visibility.Collapsed;
+        ClassContent.Visibility = Visibility.Collapsed;
+        TeacherContent.Visibility = Visibility.Visible;
+        InfoContent.Visibility = Visibility.Collapsed;
+    }
+    private void Info_Click(object sender, RoutedEventArgs e)
+    {
+        DashboardContent.Visibility = Visibility.Collapsed;
+        RegisterContent.Visibility = Visibility.Collapsed;
+        ClassContent.Visibility = Visibility.Collapsed;
+        TeacherContent.Visibility = Visibility.Collapsed;
+        InfoContent.Visibility = Visibility.Visible;
+    }
+    
 }

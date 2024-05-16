@@ -41,34 +41,34 @@
                 <Separator Height="0.8" Margin="20 30" Background="LightSlateGray"></Separator>
                 
                 <!-- Menu Buttons -->
-                <Button Style="{StaticResource menuButtonActive}">
+                <Button Style="{StaticResource menuButtonActive}" Click="Dashboard_Click">
                     <StackPanel Orientation="Horizontal">
                         <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"></fa:IconImage>
                         <TextBlock Text="Dashboard" Style="{StaticResource menuButtonText}"></TextBlock>
                     </StackPanel>
                 </Button>
                 
-                <Button Style="{StaticResource menuButton}">
+                <Button Style="{StaticResource menuButton}" Click="Users_Click">
                     <StackPanel Orientation="Horizontal">
                         <fa:IconImage Icon="Users" Style="{StaticResource menuButtonIcon}"></fa:IconImage>
                         <TextBlock Text="Registers" Style="{StaticResource menuButtonText}"></TextBlock>
                     </StackPanel>
                 </Button>
                 
-                <Button Style="{StaticResource menuButton}">
+                <Button Style="{StaticResource menuButton}" Click="Class_Click">
                     <StackPanel Orientation="Horizontal">
                         <fa:IconImage Icon="Table" Style="{StaticResource menuButtonIcon}"></fa:IconImage>
                         <TextBlock Text="Class" Style="{StaticResource menuButtonText}"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button Style="{StaticResource menuButton}">
+                <Button Style="{StaticResource menuButton}" Click="Teacher_Click">
                     <StackPanel Orientation="Horizontal">
                         <fa:IconImage Icon="UserPen" Style="{StaticResource menuButtonIcon}"></fa:IconImage>
                         <TextBlock Text="Teacher" Style="{StaticResource menuButtonText}"></TextBlock>
                     </StackPanel>
                 </Button>
                 
-                <Button Style="{StaticResource menuButton}">
+                <Button Style="{StaticResource menuButton}" Click="Info_Click">
                     <StackPanel Orientation="Horizontal">
                         <fa:IconImage Icon="Info" Style="{StaticResource menuButtonIcon}"></fa:IconImage>
                         <TextBlock Text="Information" Style="{StaticResource menuButtonText}"></TextBlock>
@@ -93,11 +93,33 @@
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
                 
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 30 20">
-                    <Button Content="Today"></Button>
-                </StackPanel>
+               
+                <!-- Dashboard Content -->
+                <Grid x:Name="DashboardContent" Grid.Row="2">
+                    <TextBlock Text="Dashboard Content" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
+                </Grid>
+
+                <!-- Register Content -->
+                <Grid x:Name="RegisterContent" Grid.Row="2" Visibility="Collapsed">
+                    <TextBlock Text="Register Content" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
+                </Grid>
+                
+                <!-- Class Content -->
+                <Grid x:Name="ClassContent" Grid.Row="2" Visibility="Collapsed">
+                    <TextBlock Text="Class Content" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
+                </Grid>
+                
+                <!-- Teacher Content -->
+                <Grid x:Name="TeacherContent" Grid.Row="2" Visibility="Collapsed">
+                    <TextBlock Text="Teacher Content" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
+                </Grid>
+                
+                <!-- Info Content -->
+                <Grid x:Name="InfoContent" Grid.Row="2" Visibility="Collapsed">
+                    <TextBlock Text="Info Content" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
+                </Grid>
             </Grid>
             
-        </Border>
+        </Border> 
     </Grid>
 </Window>
