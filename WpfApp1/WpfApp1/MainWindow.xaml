@@ -96,12 +96,37 @@
                
                 <!-- Dashboard Content -->
                 <Grid x:Name="DashboardContent" Grid.Row="2">
-                    <TextBlock Text="Dashboard Content" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Border CornerRadius="10" Width="200" Height="100" Background="LightBlue" Margin="10">
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Text="Total Students" FontSize="15" Margin="0 0 0 5" Foreground="RoyalBlue" />
+                                <TextBlock Text="10" FontSize="25" Foreground="RoyalBlue" />
+                            </StackPanel>
+                        </Border>
+                        <Border CornerRadius="10" Width="200" Height="100" Background="LightBlue" Margin="10">
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Text="Total Teachers" FontSize="15" Margin="0 0 0 5" Foreground="RoyalBlue" />
+                                <TextBlock Text="20" FontSize="25" Foreground="RoyalBlue" />
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
                 </Grid>
 
                 <!-- Register Content -->
                 <Grid x:Name="RegisterContent" Grid.Row="2" Visibility="Collapsed">
-                    <TextBlock Text="Register Content" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBox x:Name="StudentName" Width="200" Margin="5"/>
+                        <TextBox x:Name="StudentSurname" Width="200" Margin="5" />
+                        <ComboBox x:Name="StudentGender" Width="200" Margin="5" >
+                            <ComboBoxItem Content="Male"/>
+                            <ComboBoxItem Content="Female"/>
+                            <ComboBoxItem Content="Other"/>
+                        </ComboBox>
+                        <TextBox x:Name="StudentAge" Width="200" Margin="5" />
+                        <TextBox x:Name="FatherName" Width="200" Margin="5"/>
+                        <TextBox x:Name="MotherName" Width="200" Margin="5" />
+                        <Button Content="Confirm" Width="200" Margin="10"  />
+                    </StackPanel>
                 </Grid>
                 
                 <!-- Class Content -->
