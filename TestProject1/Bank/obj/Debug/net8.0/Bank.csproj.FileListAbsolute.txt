@@ -1,0 +1,12 @@
+C:\Users\Malat\Desktop\Code\net\TestProject1\Bank\bin\Debug\net8.0\Bank.deps.json
+C:\Users\Malat\Desktop\Code\net\TestProject1\Bank\bin\Debug\net8.0\Bank.dll
+C:\Users\Malat\Desktop\Code\net\TestProject1\Bank\bin\Debug\net8.0\Bank.pdb
+C:\Users\Malat\Desktop\Code\net\TestProject1\Bank\obj\Debug\net8.0\Bank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Malat\Desktop\Code\net\TestProject1\Bank\obj\Debug\net8.0\Bank.AssemblyInfoInputs.cache
+C:\Users\Malat\Desktop\Code\net\TestProject1\Bank\obj\Debug\net8.0\Bank.AssemblyInfo.cs
+C:\Users\Malat\Desktop\Code\net\TestProject1\Bank\obj\Debug\net8.0\Bank.csproj.CoreCompileInputs.cache
+C:\Users\Malat\Desktop\Code\net\TestProject1\Bank\obj\Debug\net8.0\Bank.sourcelink.json
+C:\Users\Malat\Desktop\Code\net\TestProject1\Bank\obj\Debug\net8.0\Bank.dll
+C:\Users\Malat\Desktop\Code\net\TestProject1\Bank\obj\Debug\net8.0\refint\Bank.dll
+C:\Users\Malat\Desktop\Code\net\TestProject1\Bank\obj\Debug\net8.0\Bank.pdb
+C:\Users\Malat\Desktop\Code\net\TestProject1\Bank\obj\Debug\net8.0\ref\Bank.dll
