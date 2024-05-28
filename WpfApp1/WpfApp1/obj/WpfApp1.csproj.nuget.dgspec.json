@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Malat\\Desktop\\Code\\net\\WpfApp1\\WpfApp1\\WpfApp1.csproj": {}
+    "C:\\Users\\onuru\\Documents\\GitHub\\ASP.Net-React-ExamplesAndTryOuts\\WpfApp1\\WpfApp1\\WpfApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Malat\\Desktop\\Code\\net\\WpfApp1\\WpfApp1\\WpfApp1.csproj": {
+    "C:\\Users\\onuru\\Documents\\GitHub\\ASP.Net-React-ExamplesAndTryOuts\\WpfApp1\\WpfApp1\\WpfApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Malat\\Desktop\\Code\\net\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+        "projectUniqueName": "C:\\Users\\onuru\\Documents\\GitHub\\ASP.Net-React-ExamplesAndTryOuts\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
         "projectName": "WpfApp1",
-        "projectPath": "C:\\Users\\Malat\\Desktop\\Code\\net\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
-        "packagesPath": "C:\\Users\\Malat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Malat\\Desktop\\Code\\net\\WpfApp1\\WpfApp1\\obj\\",
+        "projectPath": "C:\\Users\\onuru\\Documents\\GitHub\\ASP.Net-React-ExamplesAndTryOuts\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+        "packagesPath": "C:\\Users\\onuru\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\onuru\\Documents\\GitHub\\ASP.Net-React-ExamplesAndTryOuts\\WpfApp1\\WpfApp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Malat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\onuru\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -48,6 +47,14 @@
             "FontAwesome.Sharp": {
               "target": "Package",
               "version": "[6.3.0, )"
+            },
+            "FontAwesome.WPF": {
+              "target": "Package",
+              "version": "[4.7.0.9, )"
+            },
+            "LiveCharts.Wpf": {
+              "target": "Package",
+              "version": "[0.9.7, )"
             }
           },
           "imports": [
@@ -69,7 +76,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

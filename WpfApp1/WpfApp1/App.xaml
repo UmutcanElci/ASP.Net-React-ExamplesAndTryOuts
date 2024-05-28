@@ -1,88 +1,69 @@
 ﻿<Application x:Class="WpfApp1.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
              StartupUri="LoginPage.xaml">
     <Application.Resources>
-         <Style x:Key="menuButton" TargetType="Button">
-             <Setter Property="Background" Value="Transparent"></Setter>
-             <Setter Property="Foreground" Value="MediumTurquoise"></Setter>
-             <Setter Property="Margin" Value="0 0 0 5"></Setter>
-             <Setter Property="Height" Value="45"></Setter>
-             <Setter Property="FocusVisualStyle" Value="{x:Null}"></Setter>
-             <Setter Property="Tag" Value="#6673b7"></Setter>
-             <Setter Property="Template">
-                 <Setter.Value>
-                     <ControlTemplate TargetType="Button">
-                         <Border Background="{TemplateBinding Background}" BorderThickness="4 0 0 0" BorderBrush="Transparent">
-                             <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Center"></ContentPresenter>
-                         </Border>
-                     </ControlTemplate>
-                 </Setter.Value>
-             </Setter>
-             
-             <Style.Triggers>
-                 <Trigger Property="IsMouseOver" Value="True">
-                     <Setter Property="Foreground" Value="Azure"></Setter>
-                     <Setter Property="Tag" Value="#bccaf1"></Setter>
-                     <Setter Property="Background">
-                         <Setter.Value>
-                             <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
-                                 <GradientStop Color="Aqua" Offset="0"></GradientStop>
-                                 <GradientStop Color="Aquamarine" Offset="3"></GradientStop>
-                             </LinearGradientBrush>
-                         </Setter.Value>
-                     </Setter>
-                     <Setter Property="Template">
-                         <Setter.Value>
-                             <ControlTemplate TargetType="Button">
-                                 <Border Background="{TemplateBinding Background}" BorderThickness="4 0 0 0" BorderBrush="Transparent">
-                                     <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Center"></ContentPresenter>
-                                 </Border>
-                             </ControlTemplate>
-                         </Setter.Value>
-                     </Setter>
-                 </Trigger>
-             </Style.Triggers>
-         </Style>
-        
-        <Style x:Key="menuButtonIcon" TargetType="fa:IconImage">
-            <Setter Property="Width" Value="23"></Setter>
-            <Setter Property="Height" Value="23"></Setter>
-            <Setter Property="Margin" Value="35 0 20 0"></Setter>
-            <Setter Property="Foreground" Value="{Binding Path=Tag,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}"></Setter>
+        <!-- Stiller buraya eklenebilir -->
+        <Style x:Key="menuButton" TargetType="Button">
+            <Setter Property="Background" Value="RoyalBlue"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="DarkBlue"/>
+                </Trigger>
+                <Trigger Property="IsFocused" Value="True">
+                    <Setter Property="Background" Value="Navy"/>
+                </Trigger>
+            </Style.Triggers>
         </Style>
-        
-        
-        <Style x:Key="menuButtonText" TargetType="TextBlock">
-            <Setter Property="FontSize" Value="13"></Setter>
-            <Setter Property="VerticalAlignment" Value="Center"></Setter>
-            <Setter Property="Foreground" Value="{Binding Path=Foreground,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type Button}}}"></Setter>
-        </Style>
-        
-        <Style x:Key="menuButtonActive" TargetType="Button">
-            <Setter Property="Background">
+
+        <Style x:Key="roundedListBox" TargetType="ListBox">
+            <Setter Property="Template">
                 <Setter.Value>
-                    <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
-                        <GradientStop Color="DodgerBlue" Offset="0"></GradientStop>
-                        <GradientStop Color="Aquamarine" Offset="3"></GradientStop>
-                    </LinearGradientBrush>
+                    <ControlTemplate TargetType="ListBox">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                CornerRadius="10"
+                                Padding="5"
+                                Margin="5">
+                            <ScrollViewer>
+                                <ItemsPresenter/>
+                            </ScrollViewer>
+                        </Border>
+                    </ControlTemplate>
                 </Setter.Value>
             </Setter>
-            <Setter Property="Foreground" Value="#bccaf1"></Setter>
-             <Setter Property="Margin" Value="0 0 0 5"></Setter>
-             <Setter Property="Height" Value="45"></Setter>
-             <Setter Property="FocusVisualStyle" Value="{x:Null}"></Setter>
-             <Setter Property="Tag" Value="#7071f0"></Setter>
-             <Setter Property="Template">
-                 <Setter.Value>
-                     <ControlTemplate TargetType="Button">
-                         <Border Background="{TemplateBinding Background}" BorderThickness="4 0 0 0" BorderBrush="LightSkyBlue">
-                             <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Center"></ContentPresenter>
-                         </Border>
-                     </ControlTemplate>
-                 </Setter.Value>
-             </Setter>
-         </Style>
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="BorderBrush" Value="DarkGray"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+
+        <Style x:Key="roundedComboBoxItem" TargetType="ComboBoxItem">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBoxItem">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                CornerRadius="10"
+                                Padding="5"
+                                Margin="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="BorderBrush" Value="DarkGray"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
     </Application.Resources>
 </Application>

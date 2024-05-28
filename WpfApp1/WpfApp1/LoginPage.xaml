@@ -5,21 +5,73 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Login" Height="370" Width="300" FontSize="14" Background="LightSkyBlue"
-        HorizontalContentAlignment="Center"
-        WindowStartupLocation="CenterScreen">
+        Title="Login" Height="500" Width="400" FontSize="14"
+        WindowStartupLocation="CenterScreen"
+        Background="LightSkyBlue">
+    
+    <Window.Resources>
+        <!-- TextBox Style -->
+        <Style TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border CornerRadius="10" BorderThickness="2" BorderBrush="Black" Background="{TemplateBinding Background}">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
         
-        <Border Background="SkyBlue" CornerRadius="20" Margin="20">
-                <StackPanel Margin="20">
-                        <Label Content="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center"></Label>
-                        <Separator></Separator>
-                        <Label Content="Username" Foreground="White"></Label>
-                        <TextBox Name="txtUsername" Background="Silver" Foreground="White" FontSize="18"></TextBox>
-                        <Label Content="Password" Foreground="White"></Label>
-                        <PasswordBox Name="txtPassword" Background="Silver" Foreground="White" FontSize="18"></PasswordBox>
-                        <Button Name="btnSubmit" Content="Login" Background="LightGray" Foreground="White" FontSize="18" Margin="60 10" Click="BtnSubmit_OnClick"></Button>
-                </StackPanel>
-        </Border>
-        
+        <!-- PasswordBox Style -->
+        <Style TargetType="PasswordBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="PasswordBox">
+                        <Border CornerRadius="10" BorderThickness="2" BorderBrush="Black" Background="{TemplateBinding Background}">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
 
+        <!-- Button Style -->
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10" BorderThickness="2" BorderBrush="Black" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <!-- Background Image -->
+        <Image Source="pack://application:,,,/imgs/login.png" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        
+        <!-- Content -->
+        <Grid>
+            <Border Background="#FFFFFF" CornerRadius="20" Width="170" Height="170" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,180,0,0" Padding="10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Username" Foreground="Black" Margin="0,0,0,5" Grid.Row="0" FontWeight="Bold"/>
+                    <TextBox Name="txtUsername" Background="White" Foreground="Black" FontSize="8" Height="20" Margin="0,0,0,8" Grid.Row="1"/>
+                    <Label Content="Password" Foreground="Black" Margin="0,0,0,5" Grid.Row="2" FontWeight="Bold"/>
+                    <PasswordBox Name="txtPassword" Background="White" Foreground="Black" FontSize="8" Height="20" Margin="0,0,0,8" Grid.Row="3"/>
+                    <Button Name="btnSubmit" Content="Login" Background="#FAF3E0" Foreground="Black" FontSize="10" Width="80" Height="18" HorizontalAlignment="Center" Margin="0,8,0,0" Click="BtnSubmit_OnClick" Grid.Row="4"/>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
 </Window>

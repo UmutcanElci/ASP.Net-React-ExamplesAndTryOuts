@@ -10,6 +10,24 @@
 
     <ItemGroup>
       <PackageReference Include="FontAwesome.Sharp" Version="6.3.0" />
+      <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
+      <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="imgs\login.png" />
+      <Resource Include="imgs\login.png" />
+      <EmbeddedResource Remove="imgs\back.resx" />
+      <None Remove="imgs\back.png" />
+      <Resource Include="imgs\back.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Update="MainWindow.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
     </ItemGroup>
 
 </Project>

@@ -4,147 +4,287 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
-        xmlns:fa = "http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d" Height="740" Width="1280"
         WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+    <Window.Resources>
+        <Style x:Key="menuButton" TargetType="Button">
+            <Setter Property="Background" Value="RoyalBlue"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="DarkBlue"/>
+                </Trigger>
+                <Trigger Property="IsFocused" Value="True">
+                    <Setter Property="Background" Value="Navy"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="menuButtonIcon" TargetType="fa:IconImage">
+            <!-- menuButtonIcon stili burada tanımlanabilir -->
+        </Style>
+
+        <Style x:Key="menuButtonText" TargetType="TextBlock">
+            <!-- menuButtonText stili burada tanımlanabilir -->
+        </Style>
+
+        <Style x:Key="roundedListBox" TargetType="ListBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBox">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                CornerRadius="10"
+                                Padding="5"
+                                Margin="5">
+                            <ScrollViewer>
+                                <ItemsPresenter/>
+                            </ScrollViewer>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="BorderBrush" Value="DarkGray"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+
+        <Style x:Key="roundedComboBoxItem" TargetType="ComboBoxItem">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBoxItem">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                CornerRadius="10"
+                                Padding="5"
+                                Margin="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="BorderBrush" Value="DarkGray"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+    </Window.Resources>
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/imgs/back.png" />
+        </Grid.Background>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <!-- Left Menu -->
+        <!-- Sol Menü -->
         <Border CornerRadius="10 0 0 10">
             <Border.Background>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                    <GradientStop Color="RoyalBlue" Offset="0"></GradientStop>
-                    <GradientStop Color="RoyalBlue" Offset="1"></GradientStop>
+                    <GradientStop Color="RoyalBlue" Offset="0"/>
+                    <GradientStop Color="RoyalBlue" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
             <!-- Panel -->
             <StackPanel>
-                
-                <!-- Administration Icon -->
+                <!-- Yönetim İkonu -->
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 35 0 0">
                     <Border CornerRadius="10" Width="60" Height="60">
                         <Border.Background>
                             <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                                <GradientStop Color="LightBlue" Offset="0"></GradientStop>
-                                <GradientStop Color="RoyalBlue" Offset="1"></GradientStop>
+                                <GradientStop Color="LightBlue" Offset="0"/>
+                                <GradientStop Color="RoyalBlue" Offset="1"/>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <fa:IconImage Icon="UserGear" ></fa:IconImage>
+                        <fa:IconImage Icon="UserGear" />
                     </Border>
                     <StackPanel Margin="10 0 0 0" VerticalAlignment="Center">
-                        <TextBlock Text="School Administration" FontSize="15" Margin="0 0 0 5" Foreground="LightBlue"></TextBlock>
+                        <TextBlock Text="Okul Yönetimi" FontSize="15" Margin="0 0 0 5" Foreground="LightBlue"/>
                     </StackPanel>
                 </StackPanel>
-                <Separator Height="0.8" Margin="20 30" Background="LightSlateGray"></Separator>
+                <Separator Height="0.8" Margin="20 30" Background="LightSlateGray"/>
                 
-                <!-- Menu Buttons -->
-                <Button Style="{StaticResource menuButtonActive}" Click="Dashboard_Click">
+                <!-- Menü Butonları -->
+                <Button Style="{StaticResource menuButton}" Click="Dashboard_Click">
                     <StackPanel Orientation="Horizontal">
-                        <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"></fa:IconImage>
-                        <TextBlock Text="Dashboard" Style="{StaticResource menuButtonText}"></TextBlock>
+                        <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
+                        <TextBlock Text="Dashboard" Style="{StaticResource menuButtonText}"/>
                     </StackPanel>
                 </Button>
                 
                 <Button Style="{StaticResource menuButton}" Click="Users_Click">
                     <StackPanel Orientation="Horizontal">
-                        <fa:IconImage Icon="Users" Style="{StaticResource menuButtonIcon}"></fa:IconImage>
-                        <TextBlock Text="Registers" Style="{StaticResource menuButtonText}"></TextBlock>
+                        <fa:IconImage Icon="Users" Style="{StaticResource menuButtonIcon}"/>
+                        <TextBlock Text="Kayıtlar" Style="{StaticResource menuButtonText}"/>
                     </StackPanel>
                 </Button>
                 
                 <Button Style="{StaticResource menuButton}" Click="Class_Click">
                     <StackPanel Orientation="Horizontal">
-                        <fa:IconImage Icon="Table" Style="{StaticResource menuButtonIcon}"></fa:IconImage>
-                        <TextBlock Text="Class" Style="{StaticResource menuButtonText}"></TextBlock>
+                        <fa:IconImage Icon="Table" Style="{StaticResource menuButtonIcon}"/>
+                        <TextBlock Text="Sınıflar" Style="{StaticResource menuButtonText}"/>
                     </StackPanel>
                 </Button>
+                
                 <Button Style="{StaticResource menuButton}" Click="Teacher_Click">
                     <StackPanel Orientation="Horizontal">
-                        <fa:IconImage Icon="UserPen" Style="{StaticResource menuButtonIcon}"></fa:IconImage>
-                        <TextBlock Text="Teacher" Style="{StaticResource menuButtonText}"></TextBlock>
+                        <fa:IconImage Icon="UserPen" Style="{StaticResource menuButtonIcon}"/>
+                        <TextBlock Text="Öğretmenler" Style="{StaticResource menuButtonText}"/>
                     </StackPanel>
                 </Button>
                 
                 <Button Style="{StaticResource menuButton}" Click="Info_Click">
                     <StackPanel Orientation="Horizontal">
-                        <fa:IconImage Icon="Info" Style="{StaticResource menuButtonIcon}"></fa:IconImage>
-                        <TextBlock Text="Information" Style="{StaticResource menuButtonText}"></TextBlock>
+                        <fa:IconImage Icon="Info" Style="{StaticResource menuButtonIcon}"/>
+                        <TextBlock Text="Bilgi" Style="{StaticResource menuButtonText}"/>
                     </StackPanel>
                 </Button>
             </StackPanel>
         </Border>
         
-        <!-- Main Section -->
+        <!-- Ana Bölüm -->
         <Border Grid.Column="1" CornerRadius="0 10 10 0" MouseDown="UIElement_OnMouseDown">
             <Border.Background>
-                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                    <GradientStop Color="LightSkyBlue" Offset="0"></GradientStop>
-                    <GradientStop Color="LightSkyBlue" Offset="1"></GradientStop>
-                </LinearGradientBrush>
+                <SolidColorBrush Color="#F5F5DC"/>
             </Border.Background>
             
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition Height="200"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 
-               
-                <!-- Dashboard Content -->
-                <Grid x:Name="DashboardContent" Grid.Row="2">
+                <!-- Dashboard İçeriği -->
+                <Grid x:Name="DashboardContent" Grid.Row="2" Visibility="Visible">
                     <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
                         <Border CornerRadius="10" Width="200" Height="100" Background="LightBlue" Margin="10">
                             <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                <TextBlock Text="Total Students" FontSize="15" Margin="0 0 0 5" Foreground="RoyalBlue" />
-                                <TextBlock Text="10" FontSize="25" Foreground="RoyalBlue" />
+                                <TextBlock Text="Toplam Öğrenci" FontSize="15" Margin="0 0 0 5" Foreground="RoyalBlue"/>
+                                <TextBlock Text="10" FontSize="25" Foreground="RoyalBlue"/>
                             </StackPanel>
                         </Border>
                         <Border CornerRadius="10" Width="200" Height="100" Background="LightBlue" Margin="10">
                             <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                <TextBlock Text="Total Teachers" FontSize="15" Margin="0 0 0 5" Foreground="RoyalBlue" />
-                                <TextBlock Text="20" FontSize="25" Foreground="RoyalBlue" />
+                                <TextBlock Text="Toplam Öğretmen" FontSize="15" Margin="0 0 0 5" Foreground="RoyalBlue"/>
+                                <TextBlock Text="20" FontSize="25" Foreground="RoyalBlue"/>
                             </StackPanel>
                         </Border>
+                        <Border CornerRadius="10" Width="200" Height="100" Background="LightBlue" Margin="10">
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Text="Toplam Sınıf" FontSize="15" Margin="0 0 0 5" Foreground="RoyalBlue"/>
+                                <TextBlock Text="5" FontSize="25" Foreground="RoyalBlue"/>
+                            </StackPanel>
+                        </Border>
+                        <!-- Pie Chart -->
+                        <lvc:PieChart Series="{Binding PieSeriesCollection}" LegendLocation="Right"/>
                     </StackPanel>
                 </Grid>
 
-                <!-- Register Content -->
+                <!-- Register İçeriği -->
                 <Grid x:Name="RegisterContent" Grid.Row="2" Visibility="Collapsed">
-                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <TextBox x:Name="StudentName" Width="200" Margin="5"/>
-                        <TextBox x:Name="StudentSurname" Width="200" Margin="5" />
-                        <ComboBox x:Name="StudentGender" Width="200" Margin="5" >
-                            <ComboBoxItem Content="Male"/>
-                            <ComboBoxItem Content="Female"/>
-                            <ComboBoxItem Content="Other"/>
-                        </ComboBox>
-                        <TextBox x:Name="StudentAge" Width="200" Margin="5" />
-                        <TextBox x:Name="FatherName" Width="200" Margin="5"/>
-                        <TextBox x:Name="MotherName" Width="200" Margin="5" />
-                        <Button Content="Confirm" Width="200" Margin="10"  />
+                    <!-- Kayıt formu ve detaylar buraya gelecek -->
+                </Grid>
+                <!-- Sınıf İçeriği -->
+                <Grid x:Name="ClassContent" Grid.Row="2" Visibility="Collapsed">
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10">
+                        <ListBox Width="200" Height="150" Background="LightGray" SelectionChanged="ClassList_SelectionChanged" Style="{StaticResource roundedListBox}">
+                            <ListBoxItem Content="3. Sınıf"/>
+                            <ListBoxItem Content="4. Sınıf"/>
+                            <ListBoxItem Content="5. Sınıf"/>
+                            <ListBoxItem Content="6. Sınıf"/>
+                            <ListBoxItem Content="7. Sınıf"/>
+                            <ListBoxItem Content="8. Sınıf"/>
+                        </ListBox>
+                        <StackPanel x:Name="SubClassPanel" Orientation="Vertical" Visibility="Collapsed" Margin="10 0 0 0">
+                            <TextBlock Text="Alt Sınıflar" FontWeight="Bold" Margin="0 0 0 10"/>
+                            <TextBlock Text="A" Margin="0 0 0 5"/>
+                            <TextBlock Text="B" Margin="0 0 0 5"/>
+                            <TextBlock Text="C" Margin="0 0 0 5"/>
+                            <TextBlock Text="D" Margin="0 0 0 5"/>
+                            <TextBlock Text="E" Margin="0 0 0 5"/>
+                            <TextBlock Text="F" Margin="0 0 0 5"/>
+                        </StackPanel>
                     </StackPanel>
                 </Grid>
                 
-                <!-- Class Content -->
-                <Grid x:Name="ClassContent" Grid.Row="2" Visibility="Collapsed">
-                    <TextBlock Text="Class Content" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
-                </Grid>
-                
-                <!-- Teacher Content -->
+                <!-- Öğretmen İçeriği -->
                 <Grid x:Name="TeacherContent" Grid.Row="2" Visibility="Collapsed">
-                    <TextBlock Text="Teacher Content" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
+                        <!-- Kayıt Bölümü -->
+                        <Border CornerRadius="10" Background="LightGray" Padding="10" Margin="0 0 0 20">
+                            <StackPanel>
+                                <TextBlock Text="Öğretmen Kaydı" FontSize="20" FontWeight="Bold" Margin="0 0 0 10"/>
+                                <TextBlock Text="Öğretmen Adı:" Margin="0 0 0 5"/>
+                                <TextBox x:Name="TeacherName" Width="200" Margin="0 0 0 10"/>
+                                <TextBlock Text="Branş:" Margin="0 0 0 5"/>
+                                <ComboBox x:Name="BranchComboBox" Width="200" Margin="0 0 0 10">
+                                    <ComboBoxItem Content="Matematik"/>
+                                    <ComboBoxItem Content="Fizik"/>
+                                    <ComboBoxItem Content="Kimya"/>
+                                    <ComboBoxItem Content="Biyoloji"/>
+                                    <ComboBoxItem Content="Türkçe"/>
+                                    <ComboBoxItem Content="Tarih"/>
+                                    <ComboBoxItem Content="Coğrafya"/>
+                                    <ComboBoxItem Content="İngilizce"/>
+                                    <ComboBoxItem Content="Almanca"/>
+                                    <ComboBoxItem Content="Fransızca"/>
+                                    <ComboBoxItem Content="Müzik"/>
+                                    <ComboBoxItem Content="Sanat"/>
+                                    <ComboBoxItem Content="Beden Eğitimi"/>
+                                    <ComboBoxItem Content="Din Kültürü"/>
+                                    <ComboBoxItem Content="Felsefe"/>
+                                    <ComboBoxItem Content="Bilgisayar Bilimleri"/>
+                                    <ComboBoxItem Content="Fen Bilimleri"/>
+                                    <ComboBoxItem Content="Sınıf Öğretmeni"/>
+                                </ComboBox>
+                                <Button Content="Kaydet" Width="200" Margin="0 10 0 0" Click="SaveTeacher_Click"/>
+                                <Button Content="Sil" Width="200" Margin="10 0 0 0" Click="DeleteTeacher_Click"/>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10">
+                        <!-- Branş Listesi -->
+                        <ListBox x:Name="BranchListBox" Width="200" Height="150" Background="LightGray" SelectionChanged="BranchList_SelectionChanged" Style="{StaticResource roundedListBox}">
+                            <ListBoxItem Content="Matematik"/>
+                            <ListBoxItem Content="Fizik"/>
+                            <ListBoxItem Content="Kimya"/>
+                            <ListBoxItem Content="Biyoloji"/>
+                            <ListBoxItem Content="Türkçe"/>
+                            <ListBoxItem Content="Tarih"/>
+                            <ListBoxItem Content="Coğrafya"/>
+                            <ListBoxItem Content="İngilizce"/>
+                            <ListBoxItem Content="Almanca"/>
+                            <ListBoxItem Content="Fransızca"/>
+                            <ListBoxItem Content="Müzik"/>
+                            <ListBoxItem Content="Sanat"/>
+                            <ListBoxItem Content="Beden Eğitimi"/>
+                            <ListBoxItem Content="Din Kültürü"/>
+                            <ListBoxItem Content="Felsefe"/>
+                            <ListBoxItem Content="Bilgisayar Bilimleri"/>
+                            <ListBoxItem Content="Fen Bilimleri"/>
+                            <ListBoxItem Content="Sınıf Öğretmeni"/>
+                        </ListBox>
+                        <ListBox x:Name="TeacherListBox" Width="200" Height="200" Background="LightGray" Style="{StaticResource roundedListBox}" Margin="10 0 0 0"/>
+                    </StackPanel>
                 </Grid>
-                
-                <!-- Info Content -->
+
+                <!-- Bilgi İçeriği -->
                 <Grid x:Name="InfoContent" Grid.Row="2" Visibility="Collapsed">
-                    <TextBlock Text="Info Content" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
+                    <!-- Uygulama hakkında bilgi veya yardım bölümleri buraya gelecek -->
                 </Grid>
             </Grid>
-            
         </Border> 
     </Grid>
 </Window>
