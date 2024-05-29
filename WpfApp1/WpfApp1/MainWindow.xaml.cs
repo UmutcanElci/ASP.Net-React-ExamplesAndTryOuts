@@ -1,31 +1,30 @@
 ﻿using System;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows.Media;
 using System.Collections.Generic;
 
 namespace WpfApp1
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         private Dictionary<string, List<string>> teachersByBranch;
+        private Dictionary<string, int> classLimits = new Dictionary<string, int>
+        {
+            {"3rd Grade", 20},
+            {"4th Grade", 20},
+            {"5th Grade", 20},
+            {"6th Grade", 20},
+            {"7th Grade", 20},
+            {"8th Grade", 20}
+        };
 
         public MainWindow()
         {
             InitializeComponent();
-            // MainViewModel'i DataContext olarak ayarla.
             DataContext = new MainViewModel();
-
             teachersByBranch = new Dictionary<string, List<string>>();
             string[] branches = { "Mathematics", "Physics", "Chemistry", "Biology", "Turkish", "History", "Geography", "English", "German", "French", "Music", "Art", "Physical Education", "Religious Education", "Philosophy", "Computer Science", "Science", "Class Teacher" };
             foreach (var branch in branches)
@@ -59,7 +58,7 @@ namespace WpfApp1
             TeacherContent.Visibility = Visibility.Collapsed;
             InfoContent.Visibility = Visibility.Collapsed;
         }
-        
+
         private void Class_Click(object sender, RoutedEventArgs e)
         {
             DashboardContent.Visibility = Visibility.Collapsed;
@@ -68,7 +67,7 @@ namespace WpfApp1
             TeacherContent.Visibility = Visibility.Collapsed;
             InfoContent.Visibility = Visibility.Collapsed;
         }
-        
+
         private void Teacher_Click(object sender, RoutedEventArgs e)
         {
             DashboardContent.Visibility = Visibility.Collapsed;
@@ -87,13 +86,72 @@ namespace WpfApp1
             InfoContent.Visibility = Visibility.Visible;
         }
 
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
         private void ClassList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
             {
-                if (SubClassPanel != null)
+                if (ClassListBox.SelectedItem != null)
                 {
                     SubClassPanel.Visibility = Visibility.Visible;
+                    ClassDetailsPanel.Visibility = Visibility.Collapsed;
+                    SubClassListBox.SelectedIndex = -1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error occurred: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void SubClassList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                if (SubClassListBox.SelectedItem != null)
+                {
+                    string selectedClass = (ClassListBox.SelectedItem as ListBoxItem)?.Content.ToString();
+                    string selectedSubClass = (SubClassListBox.SelectedItem as ListBoxItem)?.Content.ToString();
+                    if (!string.IsNullOrEmpty(selectedClass) && !string.IsNullOrEmpty(selectedSubClass))
+                    {
+                        ClassDetailsPanel.Visibility = Visibility.Visible;
+                        // Örnek öğrenci sayısı ve limit verileri
+                        int studentCount = new Random().Next(0, classLimits[selectedClass]);
+                        StudentCount.Text = $"Students: {studentCount}";
+                        ClassLimit.Text = $"Limit: {classLimits[selectedClass]}";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error occurred: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void UnassignedStudentsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                if (UnassignedStudentsListBox.SelectedItem != null)
+                {
+                    string selectedStudent = (UnassignedStudentsListBox.SelectedItem as ListBoxItem)?.Content.ToString();
+                    if (!string.IsNullOrEmpty(selectedStudent))
+                    {
+                        StudentDetailsPanel.Visibility = Visibility.Visible;
+                        // Örnek öğrenci detayları, SQL'den veri alınacak
+                        StudentName.Text = $"Name: {selectedStudent}";
+                        StudentSurname.Text = "Surname: Example";
+                        MotherName.Text = "Mother's Name: Example";
+                        FatherName.Text = "Father's Name: Example";
+                        StudentNumber.Text = "Student Number: 12345";
+                        MotherPhone.Text = "Mother's Phone: 123-456-7890";
+                        FatherPhone.Text = "Father's Phone: 098-765-4321";
+                        Address.Text = "Address: Example Street, Example City";
+                    }
                 }
             }
             catch (Exception ex)
@@ -106,7 +164,6 @@ namespace WpfApp1
         {
             string teacherName = TeacherName.Text;
             string selectedBranch = (BranchComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
-
             if (!string.IsNullOrEmpty(teacherName) && !string.IsNullOrEmpty(selectedBranch))
             {
                 teachersByBranch[selectedBranch].Add(teacherName);
@@ -122,7 +179,6 @@ namespace WpfApp1
         {
             string teacherName = TeacherName.Text;
             string selectedBranch = (BranchComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
-
             if (!string.IsNullOrEmpty(teacherName) && !string.IsNullOrEmpty(selectedBranch))
             {
                 if (teachersByBranch[selectedBranch].Remove(teacherName))
@@ -154,6 +210,21 @@ namespace WpfApp1
                     }
                 }
             }
+        }
+
+        private void SaveClassChanges_Click(object sender, RoutedEventArgs e)
+        {
+            // Sınıf değişikliklerini kaydetmek için kod
+        }
+
+        private void DeleteClass_Click(object sender, RoutedEventArgs e)
+        {
+            // Sınıfı silmek için kod
+        }
+
+        private void ChangeClass_Click(object sender, RoutedEventArgs e)
+        {
+            // Sınıf değiştirmek için kod
         }
     }
 }
