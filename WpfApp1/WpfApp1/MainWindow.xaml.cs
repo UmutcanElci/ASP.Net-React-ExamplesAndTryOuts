@@ -1,35 +1,34 @@
 ﻿using System;
+using System.Collections.ObjectModel;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media;
-using System.Collections.Generic;
 
 namespace WpfApp1
 {
     public partial class MainWindow : Window
     {
-        private Dictionary<string, List<string>> teachersByBranch;
-        private Dictionary<string, int> classLimits = new Dictionary<string, int>
-        {
-            {"3rd Grade", 20},
-            {"4th Grade", 20},
-            {"5th Grade", 20},
-            {"6th Grade", 20},
-            {"7th Grade", 20},
-            {"8th Grade", 20}
-        };
+        public ObservableCollection<Student> Students { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MainViewModel();
-            teachersByBranch = new Dictionary<string, List<string>>();
-            string[] branches = { "Mathematics", "Physics", "Chemistry", "Biology", "Turkish", "History", "Geography", "English", "German", "French", "Music", "Art", "Physical Education", "Religious Education", "Philosophy", "Computer Science", "Science", "Class Teacher" };
-            foreach (var branch in branches)
+            DataContext = this;
+            LoadStudents();
+        }
+
+        private void LoadStudents()
+        {
+            try
             {
-                teachersByBranch[branch] = new List<string>();
+                Students = DatabaseHelper.GetStudents();
+                StudentListBox.ItemsSource = Students;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Öğrenciler yüklenirken bir hata oluştu: {ex.Message}");
             }
         }
 
@@ -91,140 +90,84 @@ namespace WpfApp1
             Application.Current.Shutdown();
         }
 
-        private void ClassList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void StudentListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            try
+            if (StudentListBox.SelectedItem is Student selectedStudent)
             {
-                if (ClassListBox.SelectedItem != null)
-                {
-                    SubClassPanel.Visibility = Visibility.Visible;
-                    ClassDetailsPanel.Visibility = Visibility.Collapsed;
-                    SubClassListBox.SelectedIndex = -1;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error occurred: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                StudentName.Text = selectedStudent.Name;
+                StudentSurname.Text = selectedStudent.Surname;
+                StudentAge.Text = selectedStudent.Age.ToString();
+                StudentMotherName.Text = selectedStudent.MotherName;
+                StudentFatherName.Text = selectedStudent.FatherName;
+                StudentBirthDate.Text = selectedStudent.BirthDate.ToString("yyyy-MM-dd");
+                StudentMotherPhoneNumber.Text = selectedStudent.MotherPhoneNumber;
             }
         }
 
-        private void SubClassList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ConfirmStudent_Click(object sender, RoutedEventArgs e)
         {
-            try
+            MessageBox.Show("Öğrenci onaylandı!");
+        }
+
+        private void SaveClass_Click(object sender, RoutedEventArgs e)
+        {
+            // Sınıf kaydetme işlemi burada gerçekleştirilecek
+            MessageBox.Show("Sınıf kaydedildi!");
+        }
+    }
+
+    public class Student
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public int Age { get; set; }
+        public string MotherName { get; set; }
+        public string FatherName { get; set; }
+        public DateTime BirthDate { get; set; }
+        public string MotherPhoneNumber { get; set; }
+    }
+
+    public static class DatabaseHelper
+    {
+        public static ObservableCollection<Student> GetStudents()
+        {
+            var students = new ObservableCollection<Student>();
+            string connectionString = ConfigurationManager.ConnectionStrings["StudentDB"]?.ConnectionString;
+
+            if (string.IsNullOrEmpty(connectionString))
             {
-                if (SubClassListBox.SelectedItem != null)
+                throw new InvalidOperationException("Veritabanı bağlantı dizesi bulunamadı.");
+            }
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT * FROM Students";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    string selectedClass = (ClassListBox.SelectedItem as ListBoxItem)?.Content.ToString();
-                    string selectedSubClass = (SubClassListBox.SelectedItem as ListBoxItem)?.Content.ToString();
-                    if (!string.IsNullOrEmpty(selectedClass) && !string.IsNullOrEmpty(selectedSubClass))
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        ClassDetailsPanel.Visibility = Visibility.Visible;
-                        // Örnek öğrenci sayısı ve limit verileri
-                        int studentCount = new Random().Next(0, classLimits[selectedClass]);
-                        StudentCount.Text = $"Students: {studentCount}";
-                        ClassLimit.Text = $"Limit: {classLimits[selectedClass]}";
+                        while (reader.Read())
+                        {
+                            students.Add(new Student
+                            {
+                                Id = Convert.ToInt32(reader["Id"]),
+                                Name = reader["Name"].ToString(),
+                                Surname = reader["Surname"].ToString(),
+                                Age = Convert.ToInt32(reader["Age"]),
+                                MotherName = reader["MotherName"].ToString(),
+                                FatherName = reader["FatherName"].ToString(),
+                                BirthDate = Convert.ToDateTime(reader["BirthDate"]),
+                                MotherPhoneNumber = reader["MotherPhoneNumber"].ToString()
+                            });
+                        }
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error occurred: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
 
-        private void UnassignedStudentsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            try
-            {
-                if (UnassignedStudentsListBox.SelectedItem != null)
-                {
-                    string selectedStudent = (UnassignedStudentsListBox.SelectedItem as ListBoxItem)?.Content.ToString();
-                    if (!string.IsNullOrEmpty(selectedStudent))
-                    {
-                        StudentDetailsPanel.Visibility = Visibility.Visible;
-                        // Örnek öğrenci detayları, SQL'den veri alınacak
-                        StudentName.Text = $"Name: {selectedStudent}";
-                        StudentSurname.Text = "Surname: Example";
-                        MotherName.Text = "Mother's Name: Example";
-                        FatherName.Text = "Father's Name: Example";
-                        StudentNumber.Text = "Student Number: 12345";
-                        MotherPhone.Text = "Mother's Phone: 123-456-7890";
-                        FatherPhone.Text = "Father's Phone: 098-765-4321";
-                        Address.Text = "Address: Example Street, Example City";
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error occurred: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-
-        private void SaveTeacher_Click(object sender, RoutedEventArgs e)
-        {
-            string teacherName = TeacherName.Text;
-            string selectedBranch = (BranchComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
-            if (!string.IsNullOrEmpty(teacherName) && !string.IsNullOrEmpty(selectedBranch))
-            {
-                teachersByBranch[selectedBranch].Add(teacherName);
-                MessageBox.Show($"{teacherName} has been registered to the {selectedBranch} branch.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
-            else
-            {
-                MessageBox.Show("Please enter the teacher name and select a branch.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-
-        private void DeleteTeacher_Click(object sender, RoutedEventArgs e)
-        {
-            string teacherName = TeacherName.Text;
-            string selectedBranch = (BranchComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
-            if (!string.IsNullOrEmpty(teacherName) && !string.IsNullOrEmpty(selectedBranch))
-            {
-                if (teachersByBranch[selectedBranch].Remove(teacherName))
-                {
-                    MessageBox.Show($"{teacherName} has been removed from the {selectedBranch} branch.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-                else
-                {
-                    MessageBox.Show($"{teacherName} not found in the {selectedBranch} branch.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please enter the teacher name and select a branch.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-
-        private void BranchList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (BranchListBox.SelectedItem != null)
-            {
-                string selectedBranch = (BranchListBox.SelectedItem as ListBoxItem)?.Content.ToString();
-                if (!string.IsNullOrEmpty(selectedBranch))
-                {
-                    TeacherListBox.Items.Clear();
-                    foreach (var teacher in teachersByBranch[selectedBranch])
-                    {
-                        TeacherListBox.Items.Add(new ListBoxItem { Content = teacher });
-                    }
-                }
-            }
-        }
-
-        private void SaveClassChanges_Click(object sender, RoutedEventArgs e)
-        {
-            // Sınıf değişikliklerini kaydetmek için kod
-        }
-
-        private void DeleteClass_Click(object sender, RoutedEventArgs e)
-        {
-            // Sınıfı silmek için kod
-        }
-
-        private void ChangeClass_Click(object sender, RoutedEventArgs e)
-        {
-            // Sınıf değiştirmek için kod
+            return students;
         }
     }
 }
