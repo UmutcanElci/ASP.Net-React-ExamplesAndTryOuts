@@ -61,3 +61,12 @@ C:\Users\onuru\Documents\GitHub\ASP.Net-React-ExamplesAndTryOuts\WpfApp1\WpfApp1
 C:\Users\onuru\Documents\GitHub\ASP.Net-React-ExamplesAndTryOuts\WpfApp1\WpfApp1\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
 C:\Users\onuru\Documents\GitHub\ASP.Net-React-ExamplesAndTryOuts\WpfApp1\WpfApp1\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\onuru\Documents\GitHub\ASP.Net-React-ExamplesAndTryOuts\WpfApp1\WpfApp1\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Malat\Desktop\Code\net\WpfApp1\WpfApp1\bin\Debug\net8.0-windows\FontAwesome.WPF.dll
+C:\Users\Malat\Desktop\Code\net\WpfApp1\WpfApp1\bin\Debug\net8.0-windows\LiveCharts.dll
+C:\Users\Malat\Desktop\Code\net\WpfApp1\WpfApp1\bin\Debug\net8.0-windows\LiveCharts.Wpf.dll
+C:\Users\Malat\Desktop\Code\net\WpfApp1\WpfApp1\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\Malat\Desktop\Code\net\WpfApp1\WpfApp1\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Malat\Desktop\Code\net\WpfApp1\WpfApp1\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Malat\Desktop\Code\net\WpfApp1\WpfApp1\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Malat\Desktop\Code\net\WpfApp1\WpfApp1\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Malat\Desktop\Code\net\WpfApp1\WpfApp1\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

@@ -196,24 +196,39 @@
                 <Grid x:Name="RegisterContent" Grid.Row="2" Visibility="Collapsed">
                     <StackPanel Margin="20">
                         <TextBlock Text="Öğrenci Kaydı" FontSize="20" FontWeight="Bold" Margin="0 0 0 20"/>
-                        <ListBox x:Name="StudentListBox" DisplayMemberPath="Id" SelectionChanged="StudentListBox_SelectionChanged"/>
-                        <TextBlock Text="Ad:"/>
+                        <ListBox x:Name="StudentListBox" SelectionChanged="StudentListBox_SelectionChanged" Width="400" Height="100">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
+                                        
+                                    </StackPanel>
+                                    <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="{Binding Surname}" FontWeight="Bold" Margin="5 0 0 0"/>
+                                    </StackPanel>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                        <TextBlock Text="Ad Soyad:"/>
                         <TextBox x:Name="StudentName" Width="200" Margin="0 0 0 10" IsReadOnly="True"/>
-                        <TextBlock Text="Soyad:"/>
-                        <TextBox x:Name="StudentSurname" Width="200" Margin="0 0 0 10" IsReadOnly="True"/>
-                        <TextBlock Text="Yaş:"/>
-                        <TextBox x:Name="StudentAge" Width="200" Margin="0 0 0 10" IsReadOnly="True"/>
                         <TextBlock Text="Anne Adı:"/>
                         <TextBox x:Name="StudentMotherName" Width="200" Margin="0 0 0 10" IsReadOnly="True"/>
                         <TextBlock Text="Baba Adı:"/>
                         <TextBox x:Name="StudentFatherName" Width="200" Margin="0 0 0 10" IsReadOnly="True"/>
+                        <TextBlock Text="Adres:"/>
+                        <TextBox x:Name="StudentAddress" Width="200" Margin="0 0 0 10" IsReadOnly="True"/>
+                        <TextBlock Text="Cinsiyet:"/>
+                        <TextBox x:Name="StudentGender" Width="200" Margin="0 0 0 10" IsReadOnly="True"/>
                         <TextBlock Text="Doğum Tarihi:"/>
                         <TextBox x:Name="StudentBirthDate" Width="200" Margin="0 0 0 10" IsReadOnly="True"/>
-                        <TextBlock Text="Annesinin Telefon Numarası:"/>
-                        <TextBox x:Name="StudentMotherPhoneNumber" Width="200" Margin="0 0 0 10" IsReadOnly="True"/>
+                        <TextBlock Text="E-posta:"/>
+                        <TextBox x:Name="StudentEmail" Width="200" Margin="0 0 0 10" IsReadOnly="True"/>
                         <Button Content="Onayla" Width="200" Click="ConfirmStudent_Click"/>
                     </StackPanel>
                 </Grid>
+
 
                 <!-- Class İçerik -->
                 <Grid x:Name="ClassContent" Grid.Row="2" Visibility="Collapsed">

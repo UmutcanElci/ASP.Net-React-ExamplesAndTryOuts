@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{32B11C8A-1E74-4CFD-B5AE-AD0824586F6E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp2", "WpfApp2\WpfApp2.csproj", "{37F27D42-0245-42BA-B879-3CC4DF7CA8BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{32B11C8A-1E74-4CFD-B5AE-AD0824586F6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32B11C8A-1E74-4CFD-B5AE-AD0824586F6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32B11C8A-1E74-4CFD-B5AE-AD0824586F6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37F27D42-0245-42BA-B879-3CC4DF7CA8BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37F27D42-0245-42BA-B879-3CC4DF7CA8BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37F27D42-0245-42BA-B879-3CC4DF7CA8BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37F27D42-0245-42BA-B879-3CC4DF7CA8BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

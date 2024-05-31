@@ -2,6 +2,8 @@
 using System.Collections.ObjectModel;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Net.Http;
+using System.Net.Http.Json;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -11,24 +13,39 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         public ObservableCollection<Student> Students { get; set; }
-
+        private HttpClient _httpClient;
         public MainWindow()
         {
             InitializeComponent();
+            _httpClient = new HttpClient{BaseAddress = new Uri("http://localhost:5030/api")};
             DataContext = this;
             LoadStudents();
         }
 
-        private void LoadStudents()
+        private async void LoadStudents()
         {
             try
             {
-                Students = DatabaseHelper.GetStudents();
-                StudentListBox.ItemsSource = Students;
+                var students = await _httpClient.GetFromJsonAsync<List<Student>>("RegistrationConfirmation/StudentsWithoutStudentNumber");
+                StudentListBox.ItemsSource = students;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Öğrenciler yüklenirken bir hata oluştu: {ex.Message}");
+            }
+        }
+        private void StudentListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedStudent = (Student)StudentListBox.SelectedItem;
+            if (selectedStudent != null)
+            {
+                StudentName.Text = $"{selectedStudent.Name} {selectedStudent.Surname}";
+                StudentMotherName.Text = selectedStudent.Parent?.MotherName ?? "N/A";
+                StudentFatherName.Text = selectedStudent.Parent?.FatherName ?? "N/A";
+                StudentAddress.Text = selectedStudent.Address;
+                StudentGender.Text = selectedStudent.Gender ? "Male" : "Female";
+                StudentBirthDate.Text = selectedStudent.DateOfBirth.ToShortDateString();
+                StudentEmail.Text = selectedStudent.Email;
             }
         }
 
@@ -90,19 +107,7 @@ namespace WpfApp1
             Application.Current.Shutdown();
         }
 
-        private void StudentListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (StudentListBox.SelectedItem is Student selectedStudent)
-            {
-                StudentName.Text = selectedStudent.Name;
-                StudentSurname.Text = selectedStudent.Surname;
-                StudentAge.Text = selectedStudent.Age.ToString();
-                StudentMotherName.Text = selectedStudent.MotherName;
-                StudentFatherName.Text = selectedStudent.FatherName;
-                StudentBirthDate.Text = selectedStudent.BirthDate.ToString("yyyy-MM-dd");
-                StudentMotherPhoneNumber.Text = selectedStudent.MotherPhoneNumber;
-            }
-        }
+       
 
         private void ConfirmStudent_Click(object sender, RoutedEventArgs e)
         {
@@ -121,53 +126,26 @@ namespace WpfApp1
         public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
-        public int Age { get; set; }
-        public string MotherName { get; set; }
-        public string FatherName { get; set; }
-        public DateTime BirthDate { get; set; }
-        public string MotherPhoneNumber { get; set; }
+        public string? StudentNumber { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public string Address { get; set; }
+        public string Email { get; set; }
+        public bool Gender { get; set; }
+        public int? ParentId { get; set; }
+        public Parent? Parent { get; set; }
+        
     }
 
-    public static class DatabaseHelper
+    public class Parent
     {
-        public static ObservableCollection<Student> GetStudents()
-        {
-            var students = new ObservableCollection<Student>();
-            string connectionString = ConfigurationManager.ConnectionStrings["StudentDB"]?.ConnectionString;
-
-            if (string.IsNullOrEmpty(connectionString))
-            {
-                throw new InvalidOperationException("Veritabanı bağlantı dizesi bulunamadı.");
-            }
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                string query = "SELECT * FROM Students";
-
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            students.Add(new Student
-                            {
-                                Id = Convert.ToInt32(reader["Id"]),
-                                Name = reader["Name"].ToString(),
-                                Surname = reader["Surname"].ToString(),
-                                Age = Convert.ToInt32(reader["Age"]),
-                                MotherName = reader["MotherName"].ToString(),
-                                FatherName = reader["FatherName"].ToString(),
-                                BirthDate = Convert.ToDateTime(reader["BirthDate"]),
-                                MotherPhoneNumber = reader["MotherPhoneNumber"].ToString()
-                            });
-                        }
-                    }
-                }
-            }
-
-            return students;
-        }
+        public int Id { get; set; }
+        public string FatherName { get; set; } = string.Empty;
+        public string MotherName { get; set; } = string.Empty;
+        public string Surname { get; set; } = string.Empty;
+        public string PhoneNumber { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string Address { get; set; } = string.Empty;
     }
+
+    
 }
