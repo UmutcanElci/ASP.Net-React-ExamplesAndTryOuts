@@ -17,7 +17,7 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-            _httpClient = new HttpClient{BaseAddress = new Uri("http://localhost:5030/api")};
+            _httpClient = new HttpClient{BaseAddress = new Uri("http://localhost:5030/api/")};
             DataContext = this;
             LoadStudents();
         }
@@ -34,20 +34,55 @@ namespace WpfApp1
                 MessageBox.Show($"Öğrenciler yüklenirken bir hata oluştu: {ex.Message}");
             }
         }
-        private void StudentListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void StudentListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selectedStudent = (Student)StudentListBox.SelectedItem;
             if (selectedStudent != null)
             {
                 StudentName.Text = $"{selectedStudent.Name} {selectedStudent.Surname}";
-                StudentMotherName.Text = selectedStudent.Parent?.MotherName ?? "N/A";
-                StudentFatherName.Text = selectedStudent.Parent?.FatherName ?? "N/A";
+        
+                // Fetch parent information using ParentId
+                var parent = await GetParent(selectedStudent.ParentId);
+        
+                // Check if parent information is retrieved successfully
+                if (parent != null)
+                {
+                    StudentMotherName.Text = parent.MotherName;
+                    StudentFatherName.Text = parent.FatherName;
+                }
+                else
+                {
+                    // Handle the case when parent information is not available
+                    StudentMotherName.Text = "N/A";
+                    StudentFatherName.Text = "N/A";
+                }
+        
                 StudentAddress.Text = selectedStudent.Address;
                 StudentGender.Text = selectedStudent.Gender ? "Male" : "Female";
                 StudentBirthDate.Text = selectedStudent.DateOfBirth.ToShortDateString();
                 StudentEmail.Text = selectedStudent.Email;
             }
         }
+
+        private async Task<Parent> GetParent(int? parentId)
+        {
+            if (parentId.HasValue)
+            {
+                try
+                {
+                    // Fetch parent information using ParentId
+                    var parent = await _httpClient.GetFromJsonAsync<Parent>($"Parent/{parentId}");
+                    return parent;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error loading parent information: {ex.Message}");
+                }
+            }
+    
+            return null;
+        }
+
 
         private void UIElement_OnMouseDown(object sender, MouseButtonEventArgs e)
         {

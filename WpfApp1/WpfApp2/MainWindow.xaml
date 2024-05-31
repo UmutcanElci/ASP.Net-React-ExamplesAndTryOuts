@@ -7,12 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox x:Name="TeacherListBox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="300">
+        <ListBox x:Name="StudentListBox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="300">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <TextBlock Text="{Binding FullName}" FontWeight="Bold"/>
-                        <TextBlock Text="{Binding Subject}" />
+                        
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Name: "/>
                             <TextBlock Text="{Binding Name}" />

@@ -26,56 +26,48 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
         _httpClient = new HttpClient { BaseAddress = new Uri("http://localhost:5030/api/") };
-        LoadTeachers();
+        LoadStudents(); // Changed from LoadTeachers
     }
 
-    private async void LoadTeachers()
+    private async void LoadStudents() // Changed from LoadTeachers
     {
         try
         {
-            var teachers = await _httpClient.GetFromJsonAsync<List<Teacher>>("Teacher/GetAllTeachersAsync");
-            TeacherListBox.ItemsSource = teachers;
+            var students = await _httpClient.GetFromJsonAsync<List<Student>>("RegistrationConfirmation/StudentsWithoutStudentNumber"); // Changed from Teacher/GetAllTeachersAsync
+            StudentListBox.ItemsSource = students;
         }
         catch (Exception ex)
         {
-            MessageBox.Show($"Error loading teachers: {ex.Message}");
+            MessageBox.Show($"Error loading students: {ex.Message}");
         }
     }
 
-    public class Teacher
-    {
-        [Key]
-        public int Id { get; set; }
-
-        [StringLength(50)]
-        public string Name { get; set; }
-
-        [StringLength(50)]
-        public string Surname { get; set; }
-
-        [StringLength(50)]
-        public string Subject { get; set; }
-
-        // Optional: Add a property to display the full name in the ListBox
-        
-    }
     public class Student
     {
-        [Key]
         public int Id { get; set; }
-
-        [StringLength(50)]
         public string Name { get; set; }
-
-        [StringLength(50)]
         public string Surname { get; set; }
-
-        [StringLength(11)]
-        public string StudentNumber { get; set; }
-
-        [ForeignKey("TeacherId")]
-        public int TeacherId { get; set; }
+        public string? StudentNumber { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public string Address { get; set; }
+        public string Email { get; set; }
+        public bool Gender { get; set; }
+        public int? ParentId { get; set; }
+        public Parent? Parent { get; set; }
         
-        public Teacher Teacher { get; set; }
     }
+    public class Parent
+    {
+        public int Id { get; set; }
+        public string FatherName { get; set; } = string.Empty;
+        public string MotherName { get; set; } = string.Empty;
+        public string Surname { get; set; } = string.Empty;
+        public string PhoneNumber { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string Address { get; set; } = string.Empty;
+    }
+   
 }
+
+    
+   
